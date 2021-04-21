@@ -36,25 +36,25 @@ header {
 }
 
 h1 {
-    font-family: "Manifold Extended";
+    font-family: "Manifold Extended Heavy";
     font-size: 3rem;
     cursor: default;
     user-select: none;
 }
 
 a {
-    font-family: "Manifold Extended";
+    font-family: "Manifold Extended Heavy";
     font-size: 1.5rem;
     color: hsl(0, 0%, 70%);
     text-decoration: none;
-    padding: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 100rem;
 }
 
 a:hover {
     color: hsl(0, 0%, 55%);
 	animation: pulsing 800ms ease-out infinite alternate;
 	border-color: hsl(0, 0%, 0%);
-    border-radius: 100rem;
 }
 
 @keyframes pulsing {

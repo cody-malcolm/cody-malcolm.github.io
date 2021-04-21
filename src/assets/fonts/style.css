@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Manifold Extended';
+    src: local('Manifold Extended Bold'), local('Manifold-Extended-Bold'),
+        url('ManifoldExtendedCF-Bold.woff2') format('woff2'),
+        url('ManifoldExtendedCF-Bold.woff') format('woff'),
+        url('ManifoldExtendedCF-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
