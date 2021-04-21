@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import Nav from '@/components/Nav.vue'
+import Nav from '@/components/Nav.vue';
 
 export default {
-  name: 'App',
-  components: {
-    Nav
-  }
+    name: 'App',
+    components: {
+        Nav
+    }
 }
 </script>
 
@@ -44,6 +44,6 @@ export default {
 .main-display {
     background-image: url('./assets/images/background.jpg');
     background-color: hsl(0, 0%, 0%);
-    height: 100%;
+    height: 75vh;
 }
 </style>

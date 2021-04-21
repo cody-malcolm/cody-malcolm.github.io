@@ -40,12 +40,13 @@
     width: 60%;
     display: flex;
     flex-direction: column;
+    padding-top: 4rem;
 }
 
 p {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin: 2rem 0;
 }
 
@@ -65,6 +66,5 @@ a {
 .right {
     align-self: flex-end;
 }
-
 
 </style>
