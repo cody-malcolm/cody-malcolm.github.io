@@ -1,10 +1,10 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <Nav msg="Hello GitHub Pages!"/>
+    <Nav />
+    <router-view />
 </template>
 
 <script>
-import Nav from './components/Nav.vue'
+import Nav from '@/components/Nav.vue'
 
 export default {
   name: 'App',
@@ -15,12 +15,13 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@font-face {
+    font-family: 'Manifold Extended';
+    src: local('Manifold Extended Heavy'), local('Manifold-Extended-Heavy'),
+        url('./assets/fonts/ManifoldExtendedCF-Heavy.woff2') format('woff2'),
+        url('./assets/fonts/ManifoldExtendedCF-Heavy.woff') format('woff'),
+        url('./assets/fonts/ManifoldExtendedCF-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
 }
 </style>
