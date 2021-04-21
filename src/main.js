@@ -1,13 +1,12 @@
-import { createApp } from 'vue';
-// import VueMobileDetection from 'vue-mobile-detection';
-import App from './App.vue';
-
-import router from './router/index.js';
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
 import './assets/normalize.css';
 import './assets/reset.css';
 
-const app = createApp();
-console.log(app)
-app.use()
-console.log(app)
-createApp(App).use(router).mount('#app');
+Vue.config.productionTip = false
+
+new Vue({
+  router,
+  render: h => h(App)
+}).$mount('#app')

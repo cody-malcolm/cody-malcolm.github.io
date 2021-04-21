@@ -28,6 +28,15 @@
 </div>
 </template>
 
+// <script type="text/javascript">
+// export default {
+//     name: 'Welcome',
+//     components: {
+//     }
+// }
+//
+// </script>
+
 <style scoped>
 
 .outer-container {
