@@ -38,6 +38,8 @@ header {
 h1 {
     font-family: "Manifold Extended";
     font-size: 3rem;
+    cursor: default;
+    user-select: none;
 }
 
 a {
