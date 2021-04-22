@@ -1,71 +1,27 @@
-<template>
+<template lang="html">
 <div class="outer-container">
     <div class="inner-container">
         <VueSlickCarousel class="carousel" ref="carousel" v-bind="settings">
-            <div class="section" id="my">
-                <p class="centered">
-                    My name is Cody Malcolm and I'm an undergraduate studying Computer
-                    Science with a minor in Mathematics at
-                    <a href="https://ontariotechu.ca/" target="_blank">Ontario Tech
-                    University</a>. Although I am only in my third year, I am
-                    <span class="em">super</span>-talented.
-                </p>
-                <p class="centered">
-                    It takes a lot of confidence to make a statement like that, but if
-                    you've already seen my <router-link to="/projects">project showcase
-                    </router-link> then I'm sure you'll agree the claim is justified.
-                </p>
-            </div>
-            <div class="section" id="clean">
-                <p class="centered">
-                    I pride myself on writing code that is clean, semantic, and
-                    well-documented both internally and externally. I always adhere to
-                    best practices, even though it is fun to write brilliant one-line
-                    methods on websites like
-                    <a href="https://www.codewars.com/users/cody-malcolm">Code Wars</a>.
-                </p>
-            </div>
-            <div class="section" id="robust">
-                <p class="centered">
-                    I always strive to make my programs as robust as possible,
-                    guarding against incorrect or malicious user input, edge cases,
-                    and other possible exceptions.
-                </p>
-            </div>
-            <div class="section" id="efficient">
-                <p class="centered">
-                    I chose a minor in Mathematics because it's also important to me
-                    that the software I write is efficient, logically sound, and behaves
-                    as expected. For this, I've taken classes in Statistics, Discrete
-                    Mathematics, Computational Science, Optimization, and soon
-                    Probability - with demonstrated success comparable to
-                    that of my programming classes.
-                </p>
-            </div>
-            <div class="section" id="designs">
-                <p class="centered">
-                    When designing an application, I make sure to properly utilize all
-                    <a href="/projects">object-oriented design principles</a> in order
-                    to produce a project that is modular, maintainable, and DRY. My
-                    <router-link to="/projects">project showcase</router-link> contains
-                    numerous examples of my deep understanding of these principles.
-                </p>
-            </div>
+            <AboutMe />
+            <Clean />
+            <Robust />
+            <Efficient />
+            <Designs />
         </VueSlickCarousel>
         <div class="controls">
-            <button @click="previous" class="previous">Previous</button>
+            <button @click="previous" class="button">Previous</button>
             <div>
-                <button @click="goTo(0)" class="about">About</button>
-                <button @click="goTo(1)" class="clean">Clean</button>
-                <button @click="goTo(2)" class="robust">Robust</button>
-                <button @click="goTo(3)" class="efficient">Efficient</button>
-                <button @click="goTo(4)" class="designs">Designs</button>
+                <button @click="goTo(0)" class="button">About</button>
+                <button @click="goTo(1)" class="button">Clean</button>
+                <button @click="goTo(2)" class="button">Robust</button>
+                <button @click="goTo(3)" class="button">Efficient</button>
+                <button @click="goTo(4)" class="button">Designs</button>
             </div>
-            <button @click="next" class="next">Next</button>
+            <button @click="next" class="button">Next</button>
         </div>
         <div class="auto-controls">
-            <button @click="pause" ref="pauseButton" class="auto">Pause</button>
-            <button @click="autoplay" ref="autoplayButton" class="auto" style="display: none;">Autoplay</button>
+            <button @click="pause" ref="pauseButton" class="auto button">Pause</button>
+            <button @click="autoplay" ref="autoplayButton" class="auto button" style="display: none;">Autoplay</button>
         </div>
     </div>
 </div>
@@ -75,6 +31,12 @@
 import VueSlickCarousel from 'vue-slick-carousel';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import '../assets/carousel.css';
+
+import AboutMe from '@/components/AboutMe.vue';
+import Clean from '@/components/Clean.vue';
+import Robust from '@/components/Robust.vue';
+import Efficient from '@/components/Efficient.vue';
+import Designs from '@/components/Designs.vue';
 
 const settings = {
     dots: false,
@@ -90,7 +52,12 @@ const settings = {
 export default {
     name: 'About',
     components: {
-        VueSlickCarousel
+        VueSlickCarousel,
+        AboutMe,
+        Clean,
+        Robust,
+        Efficient,
+        Designs
     },
     data() {
         return {
@@ -122,7 +89,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="css" scoped>
 
 .carousel {
     width: 100vw;
@@ -142,9 +109,17 @@ export default {
     justify-content: center;
 }
 
-button {
+.button {
     outline: none;
     width: 8.5rem;
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 70%);
+    font-family: "Manifold Extended";
+    font-size: 1.25rem;
+}
+
+.button:hover {
+    color: hsl(0, 0%, 55%);
 }
 
 .em {
@@ -161,39 +136,14 @@ button {
     width: 80%;
     display: flex;
     flex-direction: column;
-    padding-top: 4rem;
 }
 
-p {
+.carousel::v-deep .p {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
     font-size: 1.75rem;
     margin: 2rem 0;
     word-spacing: 0.5rem;
     text-align: justify;
-}
-
-button {
-    background-color: hsl(0, 0%, 0%);
-    color: hsl(0, 0%, 70%);
-    font-family: "Manifold Extended";
-    font-size: 1.25rem;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.centered {
-    align-self: center;
-}
-
-.left {
-    align-self: flex-start;
-}
-
-.right {
-    align-self: flex-end;
 }
 </style>

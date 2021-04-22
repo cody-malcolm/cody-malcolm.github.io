@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
 <header>
     <div class="name-container">
         <h1>Cody Malcolm</h1>
@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="css" scoped>
 header {
     background-color: hsl(0, 0%, 0%);
     color: hsl(0, 0%, 70%);

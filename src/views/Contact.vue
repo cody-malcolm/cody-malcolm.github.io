@@ -1,10 +1,10 @@
-<template>
+<template lang="html">
 <div>
     <p>This is the contact page.</p>
 </div>
 </template>
 
-<style scoped>
+<style lang="css" scoped>
 
 p {
     color: hsl(0, 0%, 70%);

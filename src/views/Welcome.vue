@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
 <div class="outer-container">
     <div class="inner-container">
         <p class="centered">
@@ -37,7 +37,7 @@
 //
 // </script>
 
-<style scoped>
+<style lang="css" scoped>
 
 .outer-container {
     width: 100%;

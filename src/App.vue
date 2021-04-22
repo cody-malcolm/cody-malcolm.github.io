@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
 <div>
     <Nav />
     <div class="main-display">
@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="css">
 @font-face {
     font-family: 'Manifold Extended Heavy';
     src: local('Manifold Extended Heavy'), local('Manifold-Extended-Heavy'),
