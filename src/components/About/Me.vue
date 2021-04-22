@@ -1,5 +1,5 @@
 <template lang="html">
-<section class="section" id="about-me">
+<section class="section">
     <p class="p">
         My name is Cody Malcolm and I'm an undergraduate studying Computer
         Science with a minor in Mathematics at Ontario Tech
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-    name: 'AboutMe'
+    name: 'Me'
 }
 </script>
 

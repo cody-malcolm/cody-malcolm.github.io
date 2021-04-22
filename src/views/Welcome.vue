@@ -1,26 +1,26 @@
 <template lang="html">
 <div class="outer-container">
     <div class="inner-container">
-        <p class="centered">
+        <p class="p centered">
             Welcome to my portfolio showcase.
         </p>
-        <p class="left">
-            <router-link to="/projects">
+        <p class="p left">
+            <router-link class="a" to="/projects">
                 Check out my projects,
             </router-link>
         </p>
-        <p class="centered">
-            <router-link to="/skills">
+        <p class="p centered">
+            <router-link class="a" to="/skills">
                 see my skills,
             </router-link>
         </p>
-        <p class="right">
-            <router-link to="/about">
+        <p class="p right">
+            <router-link class="a" to="/about">
                 and learn more about me,
             </router-link>
         </p>
-        <p class="centered">
-            <router-link to="/contact">
+        <p class="p centered">
+            <router-link class="a" to="/contact">
                 then get in touch and let me know how I can help.
             </router-link>
         </p>
@@ -28,14 +28,14 @@
 </div>
 </template>
 
-// <script type="text/javascript">
+<script type="text/javascript">
 // export default {
 //     name: 'Welcome',
 //     components: {
 //     }
 // }
 //
-// </script>
+</script>
 
 <style lang="css" scoped>
 
@@ -52,14 +52,14 @@
     padding-top: 4rem;
 }
 
-p {
+.p {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
     font-size: 1.75rem;
     margin: 2rem 0;
 }
 
-a {
+.a {
     color: inherit;
     text-decoration: none;
 }

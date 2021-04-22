@@ -1,23 +1,25 @@
 <template lang="html">
-<header>
+<header class="header">
     <div class="name-container">
-        <h1>Cody Malcolm</h1>
+        <h1 class="h1">
+            Cody Malcolm
+        </h1>
     </div>
     <div class="links-container">
         <div class="link-container">
-            <router-link to="/">Welcome</router-link>
+            <router-link class="a" to="/">Welcome</router-link>
         </div>
         <div class="link-container">
-            <router-link to="/projects">Projects</router-link>
+            <router-link class="a" to="/projects">Projects</router-link>
         </div>
         <div class="link-container">
-            <router-link to="/skills">Skills</router-link>
+            <router-link class="a" to="/skills">Skills</router-link>
         </div>
         <div class="link-container">
-            <router-link to="/about">About</router-link>
+            <router-link class="a" to="/about">About</router-link>
         </div>
         <div class="link-container">
-            <router-link to="/contact">Contact</router-link>
+            <router-link class="a" to="/contact">Contact</router-link>
         </div>
     </div>
 </header>
@@ -30,19 +32,19 @@ export default {
 </script>
 
 <style lang="css" scoped>
-header {
+.header {
     background-color: hsl(0, 0%, 0%);
     color: hsl(0, 0%, 70%);
 }
 
-h1 {
+.h1 {
     font-family: "Manifold Extended Heavy";
     font-size: 3rem;
     cursor: default;
     user-select: none;
 }
 
-a {
+.a {
     font-family: "Manifold Extended Heavy";
     font-size: 1.5rem;
     color: hsl(0, 0%, 70%);
@@ -51,7 +53,7 @@ a {
     border-radius: 100rem;
 }
 
-a:hover {
+.a:hover {
     color: hsl(0, 0%, 55%);
 	animation: pulsing 800ms ease-out infinite alternate;
 	border-color: hsl(0, 0%, 0%);

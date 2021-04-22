@@ -1,5 +1,5 @@
 <template lang="html">
-<section class="section" id="robust">
+<section class="section">
     <p class="p">
         I always strive to make my programs as robust as possible,
         guarding against incorrect or malicious user input, edge cases,

@@ -2,11 +2,11 @@
 <div class="outer-container">
     <div class="inner-container">
         <VueSlickCarousel class="carousel" ref="carousel" v-bind="settings">
-            <AboutMe />
-            <Clean />
-            <Robust />
-            <Efficient />
-            <Designs />
+            <Me class="slide" />
+            <Clean class="slide" />
+            <Robust class="slide" />
+            <Efficient class="slide" />
+            <Designs class="slide" />
         </VueSlickCarousel>
         <div class="controls">
             <button @click="previous" class="button">Previous</button>
@@ -32,11 +32,11 @@ import VueSlickCarousel from 'vue-slick-carousel';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import '../assets/carousel.css';
 
-import AboutMe from '@/components/AboutMe.vue';
-import Clean from '@/components/Clean.vue';
-import Robust from '@/components/Robust.vue';
-import Efficient from '@/components/Efficient.vue';
-import Designs from '@/components/Designs.vue';
+import Me from '@/components/About/Me.vue';
+import Clean from '@/components/About/Clean.vue';
+import Robust from '@/components/About/Robust.vue';
+import Efficient from '@/components/About/Efficient.vue';
+import Designs from '@/components/About/Designs.vue';
 
 const settings = {
     dots: false,
@@ -53,7 +53,7 @@ export default {
     name: 'About',
     components: {
         VueSlickCarousel,
-        AboutMe,
+        Me,
         Clean,
         Robust,
         Efficient,
@@ -90,6 +90,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.slide {
+    outline: none;
+}
 
 .carousel {
     width: 100vw;

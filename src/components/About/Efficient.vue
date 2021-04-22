@@ -1,5 +1,5 @@
 <template lang="html">
-<section class="section" id="efficient">
+<section class="section">
     <p class="p">
         I chose a minor in Mathematics because it's also important to me
         that the software I write is efficient, logically sound, and behaves

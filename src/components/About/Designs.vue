@@ -1,5 +1,5 @@
 <template lang="html">
-<section class="section" id="designs">
+<section class="section">
     <p class="p">
         When designing an application, I make sure to properly utilize all
         appropriate object-oriented design principles in order
