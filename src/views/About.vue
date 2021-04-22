@@ -45,7 +45,7 @@ const settings = {
     infinite: true,
     speed: 350,
     autoplay: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 20000,
     pauseOnHover: false
 };
 
@@ -125,7 +125,7 @@ export default {
     color: hsl(0, 0%, 55%);
 }
 
-.em {
+.carousel::v-deep .em {
     font-style: italic;
 }
 
@@ -153,6 +153,7 @@ export default {
 .carousel::v-deep .snippet-container {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .carousel::v-deep .snippet {
