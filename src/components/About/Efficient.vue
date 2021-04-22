@@ -8,6 +8,24 @@
         Probability - with demonstrated success comparable to
         that of my programming classes.
     </p>
+    <div class="snippet-container">
+        <div class="image">
+            <img src="@/assets/images/lower_triangular_mult.png" alt="LaTeX pseudocode" />
+        </div>
+        <div class="snippet">
+            <pre><code class="code">import numpy as np
+
+def lower_mult(A, B):
+    n = np.shape(A)[0]
+    C = np.zeros((n,n))
+    for r in range(n):
+        for c in range(r+1):
+            C[r, c] = A[r,c]*B[c,c]
+            for col in range(1,r-c+1):
+                C[r, c] += A[r, c+col]*B[c+col,c]
+    return C</code></pre>
+        </div>
+    </div>
 </section>
 </template>
 

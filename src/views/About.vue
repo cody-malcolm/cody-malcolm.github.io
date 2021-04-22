@@ -149,4 +149,22 @@ export default {
     word-spacing: 0.5rem;
     text-align: justify;
 }
+
+.carousel::v-deep .snippet-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.carousel::v-deep .snippet {
+    background-color: hsl(0, 0%, 8%);
+    border: 3px solid hsl(0, 0%, 0%);
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+}
+
+.carousel::v-deep .code {
+    font-family: monospace;
+    color: white;
+}
 </style>

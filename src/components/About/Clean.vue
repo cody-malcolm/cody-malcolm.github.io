@@ -8,7 +8,7 @@
     </p>
     <div class="snippet-container">
         <div class="snippet">
-            <pre><code>// ------------- Helper methods -------------------------
+            <pre><code class="code">// ------------- Helper methods -------------------------
 // Monster -> float
 // Calculates the speed multiplier from status effects, if any
 private float speedMultiplier() {
@@ -22,7 +22,7 @@ private float speedMultiplier() {
 }</code></pre>
         </div>
         <div class="snippet">
-            <pre><code>private static void stopListening(boolean notify) {
+            <pre><code class="code">private static void stopListening(boolean notify) {
     // if server is listening,
     if (listening) {
         // close the socket
@@ -35,7 +35,7 @@ private float speedMultiplier() {
         System.out.println("The server has stopped listening for requests.");
     } else {
         // code style note: don't like else-if here for semantic reasons
-        // server was already stopped - print status message if notify flag is true
+        // server was already stopped - print status message if notify flag ...
         if (notify) {
             printStatus();
         }
@@ -53,20 +53,5 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.snippet-container {
-    display: flex;
 
-}
-.snippet {
-    background-color: hsl(0, 0%, 8%);
-    border: 3px solid hsl(0, 0%, 0%);
-    border-radius: 0.5rem;
-    margin: 1rem 0;
-    padding: 0.5rem;
-}
-
-code {
-    font-family: monospace;
-    color: white;
-}
 </style>
