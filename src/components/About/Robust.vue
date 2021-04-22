@@ -25,6 +25,7 @@ if (fin.fail()) {
         <div class="snippet">
             <pre><code class="code">// guard is to deal with an edge case
 ObservableList&lt;Node&gt; previewNodes = previewContainer.getChildren();
+
 if (previewNodes.size() &gt; 1) {
     // remove the second child of the preview container's children
     previewNodes.remove(1);
