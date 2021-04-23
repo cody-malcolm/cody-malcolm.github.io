@@ -20,8 +20,8 @@
             <button @click="next" class="button">Next</button>
         </div>
         <div class="auto-controls">
-            <button @click="pause" ref="pauseButton" class="auto button">Pause</button>
-            <button @click="autoplay" ref="autoplayButton" class="auto button" style="display: none;">Autoplay</button>
+            <button @click="pause" ref="pauseButton" class="auto button" style="display: none;">Pause</button>
+            <button @click="autoplay" ref="autoplayButton" class="auto button">Autoplay</button>
         </div>
     </div>
 </div>
@@ -44,7 +44,7 @@ const settings = {
     fade: true,
     infinite: true,
     speed: 350,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 20000,
     pauseOnHover: false
 };
@@ -145,7 +145,7 @@ export default {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
     font-size: 1.75rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
     word-spacing: 0.5rem;
     text-align: justify;
 }
@@ -166,6 +166,7 @@ export default {
 
 .carousel::v-deep .code {
     font-family: monospace;
-    color: white;
+    font-size: 1rem;
+    color: hsl(0, 0%, 90%);
 }
 </style>

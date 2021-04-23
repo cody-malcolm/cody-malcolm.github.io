@@ -32,9 +32,6 @@ public abstract class Player {
         </div>
         <div class="snippet">
             <pre><code class="code">// GameDriver.java
-// ------------- Setup -------------------------------------------------------
-final int NUM_MONSTERS = 3;
-
 // initialise Player array
 Player[] players = new Player[2];
 

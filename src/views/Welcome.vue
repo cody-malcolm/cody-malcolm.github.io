@@ -5,24 +5,17 @@
             Welcome to my portfolio showcase.
         </p>
         <p class="p left">
-            <router-link class="a" to="/projects">
-                Check out my projects,
-            </router-link>
+            Check out my <router-link class="a" to="/projects">projects,</router-link>
         </p>
         <p class="p centered">
-            <router-link class="a" to="/skills">
-                see my skills,
-            </router-link>
+            see my <router-link class="a" to="/skills">skills,</router-link>
         </p>
         <p class="p right">
-            <router-link class="a" to="/about">
-                and learn more about me,
-            </router-link>
+            and <router-link class="a" to="/about">learn more</router-link> about me,
         </p>
         <p class="p centered">
-            <router-link class="a" to="/contact">
-                then get in touch and let me know how I can help.
-            </router-link>
+            then <router-link class="a" to="/contact">get in touch</router-link>
+            and let me know how I can help.
         </p>
     </div>
 </div>
@@ -57,11 +50,13 @@
     font-family: "Manifold Extended";
     font-size: 1.75rem;
     margin: 2rem 0;
+    word-spacing: 0.25rem;
 }
 
 .a {
-    color: inherit;
+    color: hsl(0, 0%, 55%);
     text-decoration: none;
+    word-spacing: 0.25rem;
 }
 
 .centered {
