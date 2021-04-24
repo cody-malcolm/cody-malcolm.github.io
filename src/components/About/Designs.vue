@@ -9,6 +9,10 @@
     </p>
     <div class="snippet-container">
         <div class="snippet">
+            <p class="title">
+                "Monster" Battle Simulator - Java - Data Structures
+            </p>
+            <br>
             <pre><code class="code">// Player.java
 public abstract class Player {
     // ------------- Fields ----------------------------------------

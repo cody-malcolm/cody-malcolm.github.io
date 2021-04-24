@@ -11,7 +11,7 @@
                     LinkedIn</a>.
             </p>
         </div>
-        <form class="form" action="https://formspree.io/f/xqkwajjr" method="POST">
+        <form id="form" class="form" action="https://formspree.io/f/xqkwajjr" method="POST" @submit.prevent="handleSubmit">
             <div class="form-inputs">
                 <div class="form-column labels">
                     <label class="label" for="name">Name:</label>
@@ -20,11 +20,11 @@
                     <label class="label" for="message">Message:</label>
                 </div>
                 <div class="form-column inputs">
-                    <input class="input" type="text" name="name" required />
-                    <input class="input" type="text" name="company" />
-                    <input class="input" type="email" name="_replyto" required />
-                    <textarea class="input textarea" name="message" />
-                    <button class="button" type="submit">Send</button>
+                    <input @input="handleInput" v-model="form.name" class="input" type="text" name="name" required />
+                    <input @input="handleInput" v-model="form.company" class="input" type="text" name="company" />
+                    <input @input="handleInput" v-model="form._replyto" class="input" type="email" name="_replyto" required />
+                    <textarea @input="handleInput" v-model="form.message" class="input textarea" name="message" required />
+                    <button class="button" id="submit" type="submit">{{ submitText }}</button>
                 </div>
                 <div class="form-column required">
                     <p class="small">*required</p>
@@ -37,6 +37,45 @@
     </div>
 </div>
 </template>
+
+<script>
+import axios from 'axios';
+
+export default {
+    data() {
+        return {
+            form: {
+                name: '',
+                company: '',
+                _replyto: '',
+                message: ''
+            },
+            submitText: 'Send'
+        }
+    },
+    methods: {
+        handleSubmit() {
+            axios   .post('https://formspree.io/f/xqkwajjr', this.form)
+                    .then(function() {
+
+                    })
+                    .catch(function(err) {
+                        console.error(err);
+                    });
+
+            this.form.name = '';
+            this.form.company = '';
+            this.form._replyto = '';
+            this.form.message = '';
+            this.submitText = 'Sent!';
+        },
+        handleInput() {
+            this.submitText = 'Send';
+        }
+    }
+}
+
+</script>
 
 <style lang="css" scoped>
 .outer-container {

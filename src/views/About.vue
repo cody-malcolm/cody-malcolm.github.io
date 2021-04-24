@@ -150,6 +150,14 @@ export default {
     text-align: justify;
 }
 
+.carousel::v-deep .title {
+    color: hsl(0, 0%, 70%);
+    font-family: "Manifold Extended";
+    font-size: 0.75rem;
+    word-spacing: 0.5rem;
+    text-align: center;
+}
+
 .carousel::v-deep .snippet-container {
     display: flex;
     justify-content: space-around;

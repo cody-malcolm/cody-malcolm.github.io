@@ -8,6 +8,10 @@
     </p>
     <div class="snippet-container">
         <div class="snippet">
+            <p class="title">
+                "Monster" Battle Simulator - Java - Data Structures
+            </p>
+            <br>
             <pre><code class="code">// ------------- Helper methods -------------------------
 // Monster -> float
 // Calculates the speed multiplier from status effects, if any
@@ -22,6 +26,10 @@ private float speedMultiplier() {
 }</code></pre>
         </div>
         <div class="snippet">
+            <p class="title">
+                FileSharer - Java - Software Systems Development
+            </p>
+            <br>
             <pre><code class="code">private static void stopListening(boolean notify) {
     // if server is listening,
     if (listening) {

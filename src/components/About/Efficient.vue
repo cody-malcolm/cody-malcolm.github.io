@@ -13,6 +13,10 @@
             <img src="@/assets/images/lower_triangular_mult.png" alt="LaTeX pseudocode" />
         </div>
         <div class="snippet">
+            <p class="title">
+                Lower Triangular Multiplication - Python - Computational Science
+            </p>
+            <br>
             <pre><code class="code">import numpy as np
 
 def lower_mult(A, B):
