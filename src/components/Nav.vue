@@ -71,7 +71,7 @@ export default {
 .links-container {
     display: flex;
     justify-content: space-around;
-    height: 10vh;
+    height: 7vh;
 }
 
 .link-container {
@@ -82,7 +82,7 @@ export default {
 }
 
 .name-container {
-    height: 15vh;
+    height: 12vh;
     display: flex;
     flex-direction: column;
     align-items: center;

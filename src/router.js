@@ -29,7 +29,33 @@ const router = new Router({
             component: () => import('./views/Skills.vue'),
             meta: {
                 title: 'Skills'
-            }
+            },
+            children: [
+                {
+                    path: 'languages',
+                    name: 'languages',
+                    component: () => import('./components/Skills/Languages.vue'),
+                    meta: {
+                        title: 'Languages'
+                    }
+                },
+                {
+                    path: 'frameworks',
+                    name: 'frameworks',
+                    component: () => import('./components/Skills/Frameworks.vue'),
+                    meta: {
+                        title: 'Frameworks'
+                    }
+                },
+                {
+                    path: 'tools',
+                    name: 'tools',
+                    component: () => import('./components/Skills/Tools.vue'),
+                    meta: {
+                        title: 'Tools'
+                    }
+                }
+            ]
         },
         {
             path: '/about',

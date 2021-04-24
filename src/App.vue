@@ -46,6 +46,6 @@ export default {
 .main-display {
     background-image: url('./assets/images/background.jpg');
     background-color: hsl(0, 0%, 0%);
-    height: 75vh;
+    height: 81vh;
 }
 </style>
