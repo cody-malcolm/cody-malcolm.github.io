@@ -10,7 +10,7 @@
             <p class="title">
                 File I/O Lab Assignment - C++ - Programming Workshop II
             </p>
-            <br>
+            <br />
             <pre><code class="code">// verify correct number of command line arguments
 if (argc != 2) {
     cerr &lt;&lt; "Please give only the input file as an argument." &lt;&lt; endl;
@@ -30,7 +30,7 @@ if (fin.fail()) {
             <p class="title">
                 FileSharer - Java - Software Systems Development
             </p>
-            <br>
+            <br />
             <pre><code class="code">// guard is to deal with an edge case
 ObservableList&lt;Node&gt; previewNodes = previewContainer.getChildren();
 

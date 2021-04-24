@@ -12,7 +12,7 @@
             <p class="title">
                 "Monster" Battle Simulator - Java - Data Structures
             </p>
-            <br>
+            <br />
             <pre><code class="code">// Player.java
 public abstract class Player {
     // ------------- Fields ----------------------------------------

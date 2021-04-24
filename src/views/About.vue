@@ -30,7 +30,6 @@
 <script>
 import VueSlickCarousel from 'vue-slick-carousel';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
-import '../assets/carousel.css';
 
 import Me from '@/components/About/Me.vue';
 import Clean from '@/components/About/Clean.vue';
@@ -123,6 +122,7 @@ export default {
 
 .button:hover {
     color: hsl(0, 0%, 55%);
+    cursor: pointer;
 }
 
 .carousel::v-deep .em {

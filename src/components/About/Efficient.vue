@@ -16,7 +16,7 @@
             <p class="title">
                 Lower Triangular Multiplication - Python - Computational Science
             </p>
-            <br>
+            <br />
             <pre><code class="code">import numpy as np
 
 def lower_mult(A, B):

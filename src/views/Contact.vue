@@ -4,7 +4,7 @@
         <div class="contact-info">
             <p class="p">Thank you for your interest!</p>
             <p class="p">
-                To get in touch,<br>please use the form below<br> or connect on
+                To get in touch,<br />please use the form below<br /> or connect on
                 <a  href="https://www.linkedin.com/in/cody-malcolm/"
                     class="a"
                     target="_blank">
