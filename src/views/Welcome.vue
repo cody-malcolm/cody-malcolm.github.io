@@ -42,7 +42,7 @@
     width: 60%;
     display: flex;
     flex-direction: column;
-    padding-top: 4rem;
+    margin-top: 2rem;
 }
 
 .p {
