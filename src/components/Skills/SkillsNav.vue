@@ -1,13 +1,15 @@
 <template lang="html">
-<div class="links-container">
-    <div class="link-container">
-        <router-link class="a" to="/skills/languages">Languages</router-link>
-    </div>
-    <div class="link-container">
-        <router-link class="a" to="/skills/frameworks">Frameworks</router-link>
-    </div>
-    <div class="link-container">
-        <router-link class="a" to="/skills/tools">Tools</router-link>
+<div>
+    <div class="links-container">
+        <div class="link-container">
+            <router-link class="a" to="/skills/languages">Languages</router-link>
+        </div>
+        <div class="link-container">
+            <router-link class="a" to="/skills/frameworks">Frameworks</router-link>
+        </div>
+        <div class="link-container">
+            <router-link class="a" to="/skills/tools">Tools</router-link>
+        </div>
     </div>
 </div>
 </template>

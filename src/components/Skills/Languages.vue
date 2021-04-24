@@ -1,7 +1,7 @@
 <template lang="html">
 <div class="outer-container">
     <div class="inner-container">
-        <p class="p">I'm familiar with the following languages:</p>
+        <p class="p">I have recent experience with the following languages:</p>
         <ul class="list">
             <li class="li" v-for="language in languages" :key="language">
                 {{ language }}
@@ -23,8 +23,7 @@ export default {
                 "CSS3",
                 "Python",
                 "C++",
-                "SQLite",
-                "MongoDB"
+                "SQLite"
             ]
         }
     }
@@ -33,19 +32,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
-.p, .li {
-    color: hsl(0, 0%, 70%);
-    font-family: "Manifold Extended";
-    font-size: 1.75rem;
-    margin: 2rem 0;
-    word-spacing: 0.25rem;
-    text-align: center;
-}
-
-.li {
-    width: 33%;
-}
 
 .outer-container {
     width: 100%;
@@ -58,11 +44,6 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.list {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 </style>
