@@ -195,12 +195,6 @@ export default {
     justify-content: center;
 }
 
-/* .controls-inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
-
 .auto-controls {
     display: flex;
     justify-content: center;

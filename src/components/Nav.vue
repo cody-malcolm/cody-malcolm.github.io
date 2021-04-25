@@ -1,47 +1,95 @@
 <template lang="html">
 <header class="header">
-    <div class="name-container">
-        <h1 class="h1">
+    <div class="name-container" :class="$mq">
+        <h1 class="h1" :class="$mq">
             Cody Malcolm
         </h1>
     </div>
-    <div class="links-container">
-        <div class="link-container">
-            <router-link class="a" to="/">Welcome</router-link>
+    <mq-layout mq="laptop+">
+        <div class="links-container">
+            <div class="link-container">
+                <router-link class="a" to="/">Welcome</router-link>
+            </div>
+            <div class="link-container">
+                <router-link class="a" to="/projects">Projects</router-link>
+            </div>
+            <div class="link-container">
+                <router-link class="a" to="/skills">Skills</router-link>
+            </div>
+            <div class="link-container">
+                <router-link class="a" to="/about">About</router-link>
+            </div>
+            <div class="link-container">
+                <router-link class="a" to="/contact">Contact</router-link>
+            </div>
         </div>
-        <div class="link-container">
-            <router-link class="a" to="/projects">Projects</router-link>
+    </mq-layout>
+    <mq-layout mq="mobile">
+        <div class="links-menu">
+            <div class="burger" @click="toggle">
+                <div class="top" v-bind:class="{active: active}" />
+                <div class="mid" v-bind:class="{active: active}" />
+                <div class="bot" v-bind:class="{active: active}" />
+            </div>
+            <div class="mobile-menu" v-if="active">
+                <div class="mobile-link-container">
+                    <router-link class="a" to="/" @click.native="toggle">Welcome</router-link>
+                </div>
+                <div class="mobile-link-container">
+                    <router-link class="a" to="/projects" @click.native="toggle">Projects</router-link>
+                </div>
+                <div class="mobile-link-container">
+                    <router-link class="a" to="/skills" @click.native="toggle">Skills</router-link>
+                </div>
+                <div class="mobile-link-container">
+                    <router-link class="a" to="/about" @click.native="toggle">About</router-link>
+                </div>
+                <div class="mobile-link-container">
+                    <router-link class="a" to="/contact" @click.native="toggle">Contact</router-link>
+                </div>
+            </div>
         </div>
-        <div class="link-container">
-            <router-link class="a" to="/skills">Skills</router-link>
-        </div>
-        <div class="link-container">
-            <router-link class="a" to="/about">About</router-link>
-        </div>
-        <div class="link-container">
-            <router-link class="a" to="/contact">Contact</router-link>
-        </div>
-    </div>
+    </mq-layout>
 </header>
 </template>
 
 <script>
 export default {
-    name: 'Nav'
+    name: 'Nav',
+    data() {
+        return {
+            active: false
+        };
+    },
+    methods: {
+        toggle: function() {
+            this.active = !this.active;
+        }
+    }
 }
 </script>
 
 <style lang="css" scoped>
-.header {
-    background-color: hsl(0, 0%, 0%);
-    color: hsl(0, 0%, 70%);
-}
 
 .h1 {
     font-family: "Manifold Extended Heavy";
-    font-size: 3rem;
     cursor: default;
     user-select: none;
+    text-align: center;
+}
+
+.h1.desktop {
+    font-size: 3rem;
+
+}
+
+.h1.mobile {
+    font-size: 1rem;
+}
+
+.header {
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 70%);
 }
 
 .a {
@@ -81,11 +129,61 @@ export default {
     width: 20%;
 }
 
+.links-menu {
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
 .name-container {
-    height: 12vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.name-container.desktop {
+    height: 12vh;
+}
+
+.name-container.mobile {
+    height: 5vh;
+}
+
+.burger {
+    width: 33px;
+    height: 33px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.top, .mid, .bot {
+    background-color: hsl(0, 0%, 70%);
+    height: 3px;
+    border-radius: 1rem;
+    width: 33px;
+}
+
+.top.active {
+    transform: translateY(11px) rotateZ(-45deg);
+}
+
+.mid.active {
+    visibility: hidden;
+}
+.bot.active {
+    transform: translateY(-11px) rotateZ(45deg);
+}
+
+.mobile-menu {
+    position: absolute;
+    top: 66px;
+    background-color: hsl(0, 0%, 0%);
+    z-index: 1;
+}
+
+.mobile-link-container {
+    padding: 1rem;
+    text-align: center;
 }
 </style>

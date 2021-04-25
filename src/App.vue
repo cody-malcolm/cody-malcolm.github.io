@@ -1,7 +1,7 @@
 <template lang="html">
 <div>
     <Nav />
-    <div class="main-display">
+    <div class="main-display" :class="$mq">
         <router-view />
     </div>
 </div>
@@ -46,6 +46,14 @@ export default {
 .main-display {
     background-image: url('./assets/images/background.jpg');
     background-color: hsl(0, 0%, 0%);
+}
+
+.main-display.desktop {
     height: 81vh;
 }
+
+.main-display.mobile {
+    height: 90vh;
+}
+
 </style>
