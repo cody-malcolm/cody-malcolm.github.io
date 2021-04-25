@@ -30,6 +30,3 @@ export default {
     name: 'Me'
 }
 </script>
-
-<style lang="css" scoped>
-</style>

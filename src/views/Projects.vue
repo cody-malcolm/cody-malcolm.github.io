@@ -29,8 +29,10 @@
             </div>
         </mq-layout>
         <mq-layout mq="mobile">
-            <button @click="previous" class="button mobile">Prev</button>
-            <button @click="next" class="button mobile">Next</button>
+            <div class="controls">
+                <button @click="previous" class="button mobile">Prev</button>
+                <button @click="next" class="button mobile">Next</button>
+            </div>
         </mq-layout>
     </div>
 </div>
@@ -160,18 +162,10 @@ export default {
 }
 
 .p {
-    color: hsl(0, 0%, 70%);
-    font-family: "Manifold Extended";
     font-size: 1.25rem;
-    word-spacing: 0.25rem;
     text-align: center;
 }
 
-.a {
-    color: hsl(0, 0%, 55%);
-    text-decoration: none;
-    word-spacing: 0.25rem;
-}
 .carousel {
     width: 25rem;
 }
@@ -208,10 +202,6 @@ export default {
 }
 
 .button {
-    outline: none;
-    background-color: hsl(0, 0%, 0%);
-    color: hsl(0, 0%, 70%);
-    font-family: "Manifold Extended";
     font-size: 1.25rem;
     margin: 0.25rem;
 }
@@ -224,24 +214,8 @@ export default {
     width: 8rem;
 }
 
-.button:hover {
-    color: hsl(0, 0%, 55%);
-}
-
 .carousel::v-deep .em {
     font-style: italic;
 }
 
-.outer-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.inner-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-}
 </style>

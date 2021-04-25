@@ -22,35 +22,18 @@
 </template>
 
 <style lang="css" scoped>
-
-.outer-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.inner-container {
-    display: flex;
-    flex-direction: column;
-}
-
 .inner-container.desktop {
-    width: 60%;
+    /* width: 60%; */
     margin-top: 2rem;
 }
 
 .inner-container.mobile {
-    width: 95%;
     margin-top: 0.5rem;
 }
 
 .p {
-    color: hsl(0, 0%, 70%);
-    font-family: "Manifold Extended";
     font-size: 1.75rem;
-    word-spacing: 0.25rem;
 }
-
 .p.desktop {
     margin: 2rem 0;
 }
@@ -58,12 +41,6 @@
 .p.mobile {
     text-align: center;
     margin: 1rem 0;
-}
-
-.a {
-    color: hsl(0, 0%, 55%);
-    text-decoration: none;
-    word-spacing: 0.25rem;
 }
 
 .centered {

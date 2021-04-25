@@ -55,6 +55,3 @@ export default {
     name: 'Robust'
 }
 </script>
-
-<style lang="css" scoped>
-</style>

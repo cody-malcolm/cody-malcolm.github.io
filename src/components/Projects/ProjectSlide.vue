@@ -4,12 +4,12 @@
         <div class="container">
             <div class="left-container">
                 <div class="section">
-                    <p class="p" :class="$mq">
+                    <p class="p centered" :class="$mq">
                         Project name: {{ project.name }}
                     </p>
                 </div>
                 <div class="section">
-                    <p class="p" :class="$mq">
+                    <p class="p centered" :class="$mq">
                         Technologies used:
                     </p>
                     <ul class="list" :class="$mq">
@@ -19,7 +19,7 @@
                     </ul>
                 </div>
                 <div class="section">
-                    <p class="p" :class="$mq">
+                    <p class="p centered" :class="$mq">
                         Description:
                     </p>
                     <p class="p" :class="$mq">
@@ -35,12 +35,15 @@
     <mq-layout mq="mobile">
         <div class="mobile-container">
             <div>
-                <p class="p" :class="$mq">
-                    Project name: {{ project.name }}
+                <p class="p centered" :class="$mq">
+                    Project name:
+                </p>
+                <p class="p centered" :class="$mq">
+                    {{ project.name }}
                 </p>
             </div>
             <div>
-                <p class="p" :class="$mq">
+                <p class="p centered" :class="$mq">
                     Technologies used:
                 </p>
                 <ul class="list" :class="$mq">
@@ -50,7 +53,7 @@
                 </ul>
             </div>
             <div>
-                <p class="p" :class="$mq">
+                <p class="p centered" :class="$mq">
                     Description:
                 </p>
                 <p class="p" :class="$mq">
@@ -84,16 +87,18 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
 }
+
 .li {
-    margin-right: 2rem;
+    margin: 0 1rem;
 }
 
 .p, .list {
-    color: hsl(0, 0%, 70%);
-    font-family: "Manifold Extended";
-    word-spacing: 0.5rem;
     margin: 0.5rem 0;
+}
+
+.centered {
     text-align: center;
 }
 

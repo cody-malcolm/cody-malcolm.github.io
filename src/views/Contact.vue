@@ -28,10 +28,10 @@
                         <button class="button" id="submit" type="submit">{{ submitText }}</button>
                     </div>
                     <div class="form-column required">
-                        <p class="small">*required</p>
-                        <p class="small">*optional</p>
-                        <p class="small">*required</p>
-                        <p class="small">*required</p>
+                        <p class="tiny">*required</p>
+                        <p class="tiny">*optional</p>
+                        <p class="tiny">*required</p>
+                        <p class="tiny">*required</p>
                     </div>
                 </div>
             </form>
@@ -95,7 +95,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.outer-container {
+/* .outer-container {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -105,7 +105,7 @@ export default {
     width: 60%;
     display: flex;
     flex-direction: column;
-}
+} */
 
 .inner-container.desktop {
     padding-top: 2rem;
@@ -137,11 +137,6 @@ export default {
     flex-direction: column;
 }
 
-.label {
-    color: hsl(0, 0%, 70%);
-    font-family: "Manifold Extended";
-}
-
 .label.desktop {
     border: 1px solid hsla(0, 0%, 0%, 0);
     margin: 0.5rem;
@@ -164,14 +159,13 @@ export default {
     padding: 0.25rem;
     border: 1px solid hsl(0, 0%, 0%);
     margin: 0.5rem 0;
-    outline: none;
-    font-family: "Manifold Extended";
     background-color: hsl(0, 0%, 77%);
 }
 
 .input.mobile {
     width: 100%;
 }
+
 .textarea {
     height: 6rem;
     width: 20rem;
@@ -183,19 +177,10 @@ export default {
     height: 1.75rem;
     padding: 0.25rem;
     align-self: center;
-    font-family: "Manifold Extended";
-    background-color: hsl(0, 0%, 77%);
-    outline: none;
-}
-
-.button:hover {
-    background-color: hsl(0, 0%, 67%);
 }
 
 .p {
-    color: hsl(0, 0%, 70%);
-    font-family: "Manifold Extended";
-    word-spacing: 0.5rem;
+    /* was 0.5rem spacing */
     text-align: center;
 }
 
@@ -208,13 +193,13 @@ export default {
     font-size: 1.25rem;
     margin: 0 0 1rem;
 }
-
+/*
 .a {
     color: hsl(0, 0%, 55%);
     text-decoration: none;
-}
+} */
 
-.small {
+.tiny {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
     height: 1.25rem;

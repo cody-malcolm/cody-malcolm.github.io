@@ -46,15 +46,83 @@ export default {
 .main-display {
     background-image: url('./assets/images/background.jpg');
     background-color: hsl(0, 0%, 0%);
+    height: 100%;
 }
 
 .main-display.desktop {
-    height: 81vh;
+    min-height: 81vh;
 }
 
 .main-display.mobile {
     min-height: 90vh;
-    height: 100%;
+}
+
+.p, .li, .label, .title {
+    color: hsl(0, 0%, 70%);
+    font-family: "Manifold Extended";
+    word-spacing: 0.25rem;
+}
+
+.a {
+    color: hsl(0, 0%, 55%);
+    text-decoration: none;
+    word-spacing: 0.25rem;
+}
+
+.a:hover {
+    color: hsl(0, 0%, 45%);
+}
+
+.button, .input {
+    outline: none;
+    font-family: "Manifold Extended";
+}
+
+.button {
+    color: hsl(0, 0%, 70%);
+    background-color: hsl(0, 0%, 0%);
+}
+
+.button:hover {
+    color: hsl(0, 0%, 55%);
+    cursor: pointer;
+}
+
+@keyframes pulsing {
+    0% {
+        box-shadow: 0 0 0.25rem hsl(0, 0%, 55%), inset 0 0 0.25rem hsl(0, 0%, 55%);
+    }
+    100% {
+        box-shadow: 0 0 0.75rem hsl(0, 0%, 70%), inset 0 0 0.75rem hsl(0, 0%, 70%);
+    }
+}
+
+.nav {
+    font-family: "Manifold Extended Heavy";
+    font-size: 1.5rem;
+    color: hsl(0, 0%, 70%);
+    text-decoration: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 100rem;
+}
+
+.nav:hover {
+    color: hsl(0, 0%, 55%);
+	animation: pulsing 800ms ease-out infinite alternate;
+	border-color: hsl(0, 0%, 0%);
+}
+
+.outer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 75rem;
 }
 
 </style>

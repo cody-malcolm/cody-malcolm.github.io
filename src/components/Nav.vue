@@ -8,19 +8,19 @@
     <mq-layout mq="laptop+">
         <div class="links-container">
             <div class="link-container">
-                <router-link class="a" to="/">Welcome</router-link>
+                <router-link class="nav" to="/">Welcome</router-link>
             </div>
             <div class="link-container">
-                <router-link class="a" to="/projects">Projects</router-link>
+                <router-link class="nav" to="/projects">Projects</router-link>
             </div>
             <div class="link-container">
-                <router-link class="a" to="/skills">Skills</router-link>
+                <router-link class="nav" to="/skills">Skills</router-link>
             </div>
             <div class="link-container">
-                <router-link class="a" to="/about">About</router-link>
+                <router-link class="nav" to="/about">About</router-link>
             </div>
             <div class="link-container">
-                <router-link class="a" to="/contact">Contact</router-link>
+                <router-link class="nav" to="/contact">Contact</router-link>
             </div>
         </div>
     </mq-layout>
@@ -33,19 +33,19 @@
             </div>
             <div class="mobile-menu" v-if="active">
                 <div class="mobile-link-container">
-                    <router-link class="a" to="/" @click.native="toggle">Welcome</router-link>
+                    <router-link class="nav" to="/" @click.native="toggle">Welcome</router-link>
                 </div>
                 <div class="mobile-link-container">
-                    <router-link class="a" to="/projects" @click.native="toggle">Projects</router-link>
+                    <router-link class="nav" to="/projects" @click.native="toggle">Projects</router-link>
                 </div>
                 <div class="mobile-link-container">
-                    <router-link class="a" to="/skills" @click.native="toggle">Skills</router-link>
+                    <router-link class="nav" to="/skills" @click.native="toggle">Skills</router-link>
                 </div>
                 <div class="mobile-link-container">
-                    <router-link class="a" to="/about" @click.native="toggle">About</router-link>
+                    <router-link class="nav" to="/about" @click.native="toggle">About</router-link>
                 </div>
                 <div class="mobile-link-container">
-                    <router-link class="a" to="/contact" @click.native="toggle">Contact</router-link>
+                    <router-link class="nav" to="/contact" @click.native="toggle">Contact</router-link>
                 </div>
             </div>
         </div>
@@ -92,29 +92,14 @@ export default {
     color: hsl(0, 0%, 70%);
 }
 
-.a {
-    font-family: "Manifold Extended Heavy";
-    font-size: 1.5rem;
-    color: hsl(0, 0%, 70%);
-    text-decoration: none;
-    padding: 0.75rem 1.25rem;
-    border-radius: 100rem;
-}
-
-.a:hover {
-    color: hsl(0, 0%, 55%);
-	animation: pulsing 800ms ease-out infinite alternate;
-	border-color: hsl(0, 0%, 0%);
-}
-
-@keyframes pulsing {
+/* @keyframes pulsing {
     0% {
         box-shadow: 0 0 0.25rem hsl(0, 0%, 55%), inset 0 0 0.25rem hsl(0, 0%, 55%);
     }
     100% {
         box-shadow: 0 0 0.75rem hsl(0, 0%, 70%), inset 0 0 0.75rem hsl(0, 0%, 70%);
     }
-}
+} */
 
 .links-container {
     display: flex;

@@ -59,7 +59,3 @@ export default {
     name: 'Clean'
 }
 </script>
-
-<style lang="css" scoped>
-
-</style>

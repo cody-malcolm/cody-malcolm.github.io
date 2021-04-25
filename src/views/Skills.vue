@@ -27,11 +27,8 @@ export default {
 <style lang="css" scoped>
 
 .category::v-deep .p, .category::v-deep .li, .p {
-    color: hsl(0, 0%, 70%);
-    font-family: "Manifold Extended";
     font-size: 1.75rem;
     margin: 1rem 0;
-    word-spacing: 0.25rem;
     text-align: center;
 }
 
@@ -60,23 +57,23 @@ export default {
 }
 
 /* this is the top-level item of router-view */
-.outer-container {
+/* .outer-container {
     width: 100%;
     display: flex;
     justify-content: center;
-}
+} */
 
-.category::v-deep .inner-container {
+/* .category::v-deep .inner-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
-.category::v-deep .inner-container.desktop {
+/* .category::v-deep .inner-container.desktop {
     width: 60%;
 }
 
 .category::v-deep .inner-container.mobile {
     width: 95%;
-}
+} */
 </style>

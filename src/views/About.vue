@@ -117,48 +117,15 @@ export default {
 }
 
 .button {
-    outline: none;
     width: 8.5rem;
-    background-color: hsl(0, 0%, 0%);
-    color: hsl(0, 0%, 70%);
-    font-family: "Manifold Extended";
     font-size: 1.25rem;
-}
-
-.button:hover {
-    color: hsl(0, 0%, 55%);
-    cursor: pointer;
 }
 
 .carousel::v-deep .em {
     font-style: italic;
 }
 
-.outer-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.inner-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.inner-container.desktop {
-    width: 80%;
-}
-
-.inner-container.mobile {
-    width: 95%;
-}
-
-.carousel::v-deep .p {
-    color: hsl(0, 0%, 70%);
-    font-family: "Manifold Extended";
-    word-spacing: 0.5rem;
-}
-
+/* .carousel::v-deep.p was 0.5 word spacing here, */
 .carousel::v-deep .p.desktop {
     font-size: 1.25rem;
     margin: 1rem 0;
@@ -171,10 +138,7 @@ export default {
 }
 
 .carousel::v-deep .title {
-    color: hsl(0, 0%, 70%);
-    font-family: "Manifold Extended";
     font-size: 0.75rem;
-    word-spacing: 0.5rem;
     text-align: center;
 }
 
