@@ -60,7 +60,7 @@ export default {
 .p, .list {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     word-spacing: 0.5rem;
     margin: 0.5rem 0;
 }

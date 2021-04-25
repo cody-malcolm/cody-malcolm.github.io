@@ -30,9 +30,13 @@ export default {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
     font-size: 1.75rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
     word-spacing: 0.25rem;
     text-align: center;
+}
+
+.category::v-deep .li {
+    font-size: 1.25rem;
 }
 
 .category::v-deep .li {

@@ -99,7 +99,7 @@ export default {
                 {
                     name: 'Etch a Sketch',
                     techs: ['Javascript', 'HTML5', 'CSS3'],
-                    description: `One of the front-end projects for the Odin
+                    description: `One of the front-end projects in the Odin
                                 Project curriculum is to build an Etch-A-Sketch.
                                 I went considerably above and beyond the base
                                 requirements and implemented all the suggested
@@ -156,7 +156,7 @@ export default {
 .p {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     word-spacing: 0.25rem;
 }
 

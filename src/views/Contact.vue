@@ -111,7 +111,7 @@ export default {
 .label {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
-    height: 1.75rem;
+    height: 1.25rem;
     border: 1px solid hsla(0, 0%, 0%, 0);
     margin: 0.5rem;
     padding: 0.25rem;
@@ -124,7 +124,7 @@ export default {
 }
 
 .input {
-    height: 1.75rem;
+    height: 1.25rem;
     padding: 0.25rem;
     border: 1px solid hsl(0, 0%, 0%);
     margin: 0.5rem 0;
@@ -170,7 +170,7 @@ export default {
 .small {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
-    height: 1.75rem;
+    height: 1.25rem;
     border: 1px solid hsla(0, 0%, 0%, 0);
     margin: 0.5rem;
     padding: 0.25rem;

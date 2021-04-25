@@ -144,7 +144,7 @@ export default {
 .carousel::v-deep .p {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     margin: 1rem 0;
     word-spacing: 0.5rem;
     text-align: justify;
