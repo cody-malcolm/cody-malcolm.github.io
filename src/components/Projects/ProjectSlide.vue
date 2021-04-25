@@ -120,7 +120,7 @@ export default {
 .img {
     font-family: "Manifold Extended";
     color: hsl(0, 0%, 70%);
-    width: 100%;
+    width: auto;
     border: 1px solid hsl(0, 0%, 40%);
     max-height: 24rem;
 }
