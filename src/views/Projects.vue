@@ -1,9 +1,16 @@
 <template lang="html">
 <div class="outer-container">
     <div class="inner-container">
+        <!-- 3 parts - carousel slides, github link, and navigation buttons  -->
+        <!-- Note:   It would be semantically preferable to have the github link
+                be part of the slides. This is unfortunately not possible
+                because of the way vue-slick-carousel is implemented, links
+                don't appear where they display within the carousel. -->
+        <!-- carousel slides  -->
         <VueSlickCarousel class="carousel" ref="carousel" v-bind="settings">
             <ProjectSlide v-for="project in projects" v-bind:project="project" :key="project.name" />
         </VueSlickCarousel>
+        <!-- github link  -->
         <div class="github">
             <p class="p">
                 See the
@@ -13,19 +20,21 @@
                 for more details.
             </p>
         </div>
+        <!-- navigation buttons  -->
+        <!-- only desktop shows direct navigation buttons -->
         <mq-layout mq="laptop+">
             <div class="controls">
-                    <div class="step-controls">
-                        <button @click="previous" class="button desktop">Previous</button>
-                        <button @click="next" class="button desktop">Next</button>
-                    </div>
-                    <div class="jump-controls">
-                        <button @click="goTo(0)" class="button desktop">Ataxx<br />Java/JavaFX</button>
-                        <button @click="goTo(1)" class="button desktop">FileSharer<br />Java/JavaFX</button>
-                        <button @click="goTo(2)" class="button desktop">Twitter Clone<br />Full Stack Web</button>
-                        <button @click="goTo(3)" class="button desktop">Etch a Sketch<br />Front End Web</button>
-                        <button @click="goTo(4)" class="button desktop">Portfolio Website<br />Vue and Node</button>
-                    </div>
+                <div class="step-controls">
+                    <button @click="previous" class="button desktop">Previous</button>
+                    <button @click="next" class="button desktop">Next</button>
+                </div>
+                <div class="jump-controls">
+                    <button @click="goTo(0)" class="button desktop">Ataxx<br />Java/JavaFX</button>
+                    <button @click="goTo(1)" class="button desktop">FileSharer<br />Java/JavaFX</button>
+                    <button @click="goTo(2)" class="button desktop">Twitter Clone<br />Full Stack Web</button>
+                    <button @click="goTo(3)" class="button desktop">Etch a Sketch<br />Front End Web</button>
+                    <button @click="goTo(4)" class="button desktop">Portfolio Website<br />Vue and Node</button>
+                </div>
             </div>
         </mq-layout>
         <mq-layout mq="mobile">
@@ -41,9 +50,9 @@
 <script>
 import VueSlickCarousel from 'vue-slick-carousel';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
-
 import ProjectSlide from '@/components/Projects/ProjectSlide.vue';
 
+// settings for carousel
 const settings = {
     dots: false,
     arrows: false,
@@ -132,7 +141,7 @@ export default {
                     github: 'https://github.com/cody-malcolm/cody-malcolm.github.io'
                 }
             ],
-            index: 0
+            index: 0 // tracks the current index to use correct github link
         }
     },
     methods: {
@@ -155,20 +164,24 @@ export default {
 </script>
 
 <style lang="css" scoped>
+/* position github container */
 .github {
     display: flex;
     justify-content: center;
     margin: 1rem 0;
 }
 
+/* position and style github text */
 .p {
     font-size: 1.25rem;
     text-align: center;
 }
 
+/* carousel position and styling */
 .carousel {
     width: 25rem;
 }
+
 .slide {
     outline: none;
 }
@@ -177,11 +190,13 @@ export default {
     width: 100%;
 }
 
+/* position control container children */
 .controls {
     display: flex;
     justify-content: space-around;
 }
 
+/* positioning of prev/next buttons */
 .step-controls {
     display: flex;
     flex-direction: column;
@@ -190,17 +205,14 @@ export default {
     margin-right: 1rem;
 }
 
+/* positioning of direct project link buttons */
 .jump-controls {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.auto-controls {
-    display: flex;
-    justify-content: center;
-}
-
+/* size and positioning of buttons */
 .button {
     font-size: 1.25rem;
     margin: 0.25rem;
@@ -213,9 +225,4 @@ export default {
 .button.mobile {
     width: 8rem;
 }
-
-.carousel::v-deep .em {
-    font-style: italic;
-}
-
 </style>

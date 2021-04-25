@@ -7,10 +7,10 @@ import './assets/reset.css';
 
 Vue.config.productionTip = false
 
+// for media queries - tablets can use mobile layout
 Vue.use(VueMq, {
     breakpoints: {
-        mobile: 450,
-        // tablet: 900,
+        mobile: 1003,
         desktop: Infinity
     }
 });

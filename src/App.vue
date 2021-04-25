@@ -19,6 +19,7 @@ export default {
 </script>
 
 <style lang="css">
+/* Set up fonts that will be used */
 @font-face {
     font-family: 'Manifold Extended Heavy';
     src: local('Manifold Extended Heavy'), local('Manifold-Extended-Heavy'),
@@ -39,16 +40,20 @@ export default {
     font-style: normal;
   }
 
+/* fix page height to viewport height */
 #app {
     height: 100vh;
 }
 
+/* set background and height of content display */
 .main-display {
     background-image: url('./assets/images/background.jpg');
     background-color: hsl(0, 0%, 0%);
+    /* for when min-height is too small, especially mobile contact form w/keyboard */
     height: 100%;
 }
 
+/* for usual case where not all of height is completely used */
 .main-display.desktop {
     min-height: 81vh;
 }
@@ -57,7 +62,8 @@ export default {
     min-height: 90vh;
 }
 
-.p, .li, .label, .title {
+/* set basic common styling of elements */
+.p, .li, .label, .title, .img {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
     word-spacing: 0.25rem;
@@ -88,6 +94,7 @@ export default {
     cursor: pointer;
 }
 
+/* animation for nav links */
 @keyframes pulsing {
     0% {
         box-shadow: 0 0 0.25rem hsl(0, 0%, 55%), inset 0 0 0.25rem hsl(0, 0%, 55%);
@@ -112,6 +119,7 @@ export default {
 	border-color: hsl(0, 0%, 0%);
 }
 
+/* many components use these containers for layout - note: 75rem = 1200px */
 .outer-container {
     width: 100%;
     display: flex;

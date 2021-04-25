@@ -22,8 +22,8 @@
 </template>
 
 <style lang="css" scoped>
+/* space from nav bar */
 .inner-container.desktop {
-    /* width: 60%; */
     margin-top: 2rem;
 }
 
@@ -31,9 +31,11 @@
     margin-top: 0.5rem;
 }
 
+/* set text size and position */
 .p {
     font-size: 1.75rem;
 }
+
 .p.desktop {
     margin: 2rem 0;
 }

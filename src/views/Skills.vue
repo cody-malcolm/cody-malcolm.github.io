@@ -17,15 +17,16 @@ export default {
         SkillsNav
     },
     computed: {
+        // returns true when no category is selected
         mainSkillsPage: function() {
             return this.$route.name === 'skills';
         }
     }
 }
-
 </script>
-<style lang="css" scoped>
 
+<style lang="css" scoped>
+/* set text size and positioning for this and child components */
 .category::v-deep .p, .category::v-deep .li, .p {
     font-size: 1.75rem;
     margin: 1rem 0;
@@ -46,6 +47,7 @@ export default {
     width: 50%;
 }
 
+/* special handling for file formats, they can fit 3 across even on mobile */
 .category::v-deep .li.mobile.ff {
     width: 33%;
 }
@@ -55,25 +57,4 @@ export default {
     flex-wrap: wrap;
     width: 100%;
 }
-
-/* this is the top-level item of router-view */
-/* .outer-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-} */
-
-/* .category::v-deep .inner-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-
-/* .category::v-deep .inner-container.desktop {
-    width: 60%;
-}
-
-.category::v-deep .inner-container.mobile {
-    width: 95%;
-} */
 </style>

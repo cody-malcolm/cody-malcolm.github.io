@@ -1,6 +1,5 @@
 import Vue from "vue";
 import Router from "vue-router";
-
 import Welcome from './views/Welcome.vue';
 
 Vue.use(Router);
@@ -78,6 +77,7 @@ const router = new Router({
     base: process.env.BASE_URL
 });
 
+// update page title to reflect current route
 router.beforeEach((to, from, next) => {
     const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title);
 
