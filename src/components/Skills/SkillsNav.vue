@@ -1,6 +1,6 @@
 <template lang="html">
 <div>
-    <div class="links-container">
+    <div class="links-container" :class="$mq">
         <div class="link-container">
             <router-link class="a" to="/skills/languages">Languages</router-link>
         </div>
@@ -45,10 +45,17 @@ export default {
     }
 }
 
-.links-container {
+.links-container.desktop {
     display: flex;
     justify-content: center;
     height: 7vh;
+    background-color: hsl(0, 0%, 0%);
+}
+
+.links-container.mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: hsl(0, 0%, 0%);
 }
 

@@ -35,18 +35,46 @@ export default {
     text-align: center;
 }
 
-.category::v-deep .li {
+.category::v-deep .p.mobile {
     font-size: 1.25rem;
 }
 
 .category::v-deep .li {
+    font-size: 1.25rem;
+}
+
+.category::v-deep .li.desktop {
     width: 33%;
 }
 
+.category::v-deep .li.mobile {
+    width: 50%;
+}
 
 .category::v-deep .list {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+}
+
+/* this is the top-level item of router-view */
+.outer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.category::v-deep .inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category::v-deep .inner-container.desktop {
+    width: 60%;
+}
+
+.category::v-deep .inner-container.mobile {
+    width: 95%;
 }
 </style>

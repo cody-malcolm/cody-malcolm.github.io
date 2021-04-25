@@ -1,20 +1,20 @@
 <template lang="html">
 <div class="outer-container">
-    <div class="inner-container">
-        <p class="p">
+    <div class="inner-container" :class="$mq">
+        <p class="p" :class="$mq">
             Some miscellaneous tools I'm familiar with are:
         </p>
         <ul class="list">
-            <li class="li" v-for="tool in tools" :key="tool">
+            <li class="li" :class="$mq" v-for="tool in tools" :key="tool">
                 {{ tool }}
             </li>
         </ul>
-        <p class="p">
+        <p class="p" :class="$mq">
             I also have experience writing to and reading from the following
             file formats:
         </p>
         <ul class="list">
-            <li class="li" v-for="fileFormat in fileFormats" :key="fileFormat">
+            <li class="li" :class="$mq" v-for="fileFormat in fileFormats" :key="fileFormat">
                 {{ fileFormat }}
             </li>
         </ul>
@@ -48,16 +48,4 @@ export default {
 
 <style lang="css" scoped>
 
-.outer-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.inner-container {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 </style>
