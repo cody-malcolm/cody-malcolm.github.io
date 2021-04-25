@@ -150,7 +150,7 @@ export default {
 .github {
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .p {

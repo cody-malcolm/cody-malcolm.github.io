@@ -76,6 +76,7 @@ export default {
     padding-left: 0.25rem;
     display: flex;
     align-items: center;
+    max-height: 575px;
 }
 
 .img {
@@ -83,6 +84,7 @@ export default {
     color: hsl(0, 0%, 70%);
     width: 100%;
     border: 1px solid hsl(0, 0%, 40%);
+    max-height: 24rem;
 }
 
 </style>
