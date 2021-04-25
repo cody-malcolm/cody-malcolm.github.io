@@ -4,25 +4,25 @@
         <div class="container">
             <div class="left-container">
                 <div class="section">
-                    <p class="p">
+                    <p class="p" :class="$mq">
                         Project name: {{ project.name }}
                     </p>
                 </div>
                 <div class="section">
-                    <p class="p">
+                    <p class="p" :class="$mq">
                         Technologies used:
                     </p>
-                    <ul class="list">
-                        <li class="li" v-for="tech in project.techs" :key="tech">
+                    <ul class="list" :class="$mq">
+                        <li class="li" :class="$mq" v-for="tech in project.techs" :key="tech">
                             {{ tech }}
                         </li>
                     </ul>
                 </div>
                 <div class="section">
-                    <p class="p">
+                    <p class="p" :class="$mq">
                         Description:
                     </p>
-                    <p class="p">
+                    <p class="p" :class="$mq">
                         {{ project.description }}
                     </p>
                 </div>
@@ -35,25 +35,25 @@
     <mq-layout mq="mobile">
         <div class="mobile-container">
             <div>
-                <p class="p">
+                <p class="p" :class="$mq">
                     Project name: {{ project.name }}
                 </p>
             </div>
             <div>
-                <p class="p">
+                <p class="p" :class="$mq">
                     Technologies used:
                 </p>
-                <ul class="list">
-                    <li class="li" v-for="tech in project.techs" :key="tech">
+                <ul class="list" :class="$mq">
+                    <li class="li" :class="$mq" v-for="tech in project.techs" :key="tech">
                         {{ tech }}
                     </li>
                 </ul>
             </div>
             <div>
-                <p class="p">
+                <p class="p" :class="$mq">
                     Description:
                 </p>
-                <p class="p">
+                <p class="p" :class="$mq">
                     {{ project.description }}
                 </p>
             </div>
@@ -92,10 +92,21 @@ export default {
 .p, .list {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
-    font-size: 1.25rem;
     word-spacing: 0.5rem;
     margin: 0.5rem 0;
     text-align: center;
+}
+
+.p.desktop, .list.desktop {
+    font-size: 1.25rem;
+    word-spacing: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.p.mobile, .list.mobile {
+    font-size: 1.0rem;
+    word-spacing: 0.5rem;
+    margin: 0.5rem 0;
 }
 
 .mobile-container {

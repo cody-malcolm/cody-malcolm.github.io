@@ -2,13 +2,13 @@
 <div>
     <div class="links-container" :class="$mq">
         <div class="link-container">
-            <router-link class="a" to="/skills/languages">Languages</router-link>
+            <router-link class="a" :class="$mq" to="/skills/languages">Languages</router-link>
         </div>
         <div class="link-container">
-            <router-link class="a" to="/skills/frameworks">Frameworks</router-link>
+            <router-link class="a" :class="$mq" to="/skills/frameworks">Frameworks</router-link>
         </div>
         <div class="link-container">
-            <router-link class="a" to="/skills/tools">Tools</router-link>
+            <router-link class="a" :class="$mq" to="/skills/tools">Tools</router-link>
         </div>
     </div>
 </div>
@@ -22,12 +22,19 @@ export default {
 
 <style lang="css" scoped>
 .a {
-    font-family: "Manifold Extended Heavy";
-    font-size: 1.5rem;
     color: hsl(0, 0%, 70%);
+    font-family: "Manifold Extended";
+    font-size: 1.5rem;
     text-decoration: none;
-    padding: 0.75rem 1.25rem;
     border-radius: 100rem;
+}
+.a.desktop {
+    font-size: 1.5rem;
+    padding: 0.75rem 1.25rem;
+}
+.a.mobile {
+    font-size: 1.5rem;
+    padding: 0.25rem 0.5rem;
 }
 
 .a:hover {
@@ -45,18 +52,19 @@ export default {
     }
 }
 
-.links-container.desktop {
+.links-container {
     display: flex;
-    justify-content: center;
-    height: 7vh;
     background-color: hsl(0, 0%, 0%);
 }
 
+.links-container.desktop {
+    justify-content: center;
+    height: 7vh;
+}
+
 .links-container.mobile {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: hsl(0, 0%, 0%);
 }
 
 .link-container {

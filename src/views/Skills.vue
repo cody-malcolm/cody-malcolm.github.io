@@ -36,19 +36,21 @@ export default {
 }
 
 .category::v-deep .p.mobile {
-    font-size: 1.25rem;
-}
-
-.category::v-deep .li {
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .category::v-deep .li.desktop {
+    font-size: 1.25rem;
     width: 33%;
 }
 
 .category::v-deep .li.mobile {
+    font-size: 1rem;
     width: 50%;
+}
+
+.category::v-deep .li.mobile.ff {
+    width: 33%;
 }
 
 .category::v-deep .list {

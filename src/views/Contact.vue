@@ -112,7 +112,7 @@ export default {
 }
 
 .inner-container.mobile {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
 }
 
 .form, .contact-info {

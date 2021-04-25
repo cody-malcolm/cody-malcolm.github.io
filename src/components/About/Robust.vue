@@ -5,8 +5,8 @@
         guarding against incorrect or malicious user input, edge cases,
         and other possible exceptions.
     </p>
-    <div class="snippet-container" v-if="$mq === 'desktop'">
-        <div class="snippet">
+    <div class="snippet-container" :class="$mq">
+        <div class="snippet" v-if="$mq === 'desktop'">
             <p class="title">
                 File I/O Lab Assignment - C++ - Programming Workshop II
             </p>
@@ -31,7 +31,7 @@ if (fin.fail()) {
                 FileSharer - Java - Software Systems Development
             </p>
             <br />
-            <pre><code class="code">// guard is to deal with an edge case
+            <pre><code class="code" :class="$mq">// guard is to deal with an edge case
 ObservableList&lt;Node&gt; previewNodes = previewContainer.getChildren();
 
 if (previewNodes.size() &gt; 1) {

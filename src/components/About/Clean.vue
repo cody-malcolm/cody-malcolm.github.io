@@ -6,8 +6,8 @@
         practices, even though it is fun to write brilliant one-line methods on
         websites like Code Wars.
     </p>
-    <div class="snippet-container" v-if="$mq === 'desktop'">
-        <div class="snippet">
+    <div class="snippet-container" :class="$mq">
+        <div class="snippet" v-if="$mq === 'desktop'">
             <p class="title">
                 "Monster" Battle Simulator - Java - Data Structures
             </p>
@@ -25,12 +25,12 @@ private float speedMultiplier() {
     return multiplier;
 }</code></pre>
         </div>
-        <div class="snippet">
+        <div class="snippet" :class="$mq">
             <p class="title">
-                FileSharer - Java - Software Systems Development
+                FileSharer - Java<span v-if="$mq !== 'mobile'"> - Software Systems Development</span>
             </p>
-            <br />
-            <pre><code class="code">private static void stopListening(boolean notify) {
+            <br v-if="$mq !== 'mobile'" />
+            <pre><code class="code" :class="$mq">private static void stopListening(boolean notify) {
     // if server is listening,
     if (listening) {
         // close the socket

@@ -8,11 +8,11 @@
         Probability - with demonstrated success comparable to
         that of my programming classes.
     </p>
-    <div class="snippet-container" v-if="$mq === 'desktop'">
+    <div class="snippet-container" :class="$mq">
         <div class="image">
-            <img src="@/assets/images/lower_triangular_mult.png" alt="LaTeX pseudocode" />
+            <img src="@/assets/images/lower_triangular_mult.png" alt="LaTeX pseudocode" class="img" :class="$mq"/>
         </div>
-        <div class="snippet">
+        <div class="snippet" v-if="$mq === 'desktop'">
             <p class="title">
                 Lower Triangular Multiplication - Python - Computational Science
             </p>
@@ -30,7 +30,6 @@ def lower_mult(A, B):
     return C</code></pre>
         </div>
     </div>
-    <!-- <p class="p" v-else>Testing</p> -->
 </section>
 </template>
 
@@ -41,4 +40,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.img.mobile {
+    width: 95vw;
+}
 </style>

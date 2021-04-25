@@ -48,12 +48,16 @@
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
     font-size: 1.75rem;
-    margin: 2rem 0;
     word-spacing: 0.25rem;
+}
+
+.p.desktop {
+    margin: 2rem 0;
 }
 
 .p.mobile {
     text-align: center;
+    margin: 1rem 0;
 }
 
 .a {

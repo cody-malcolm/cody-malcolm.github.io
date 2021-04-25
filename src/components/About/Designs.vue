@@ -7,13 +7,13 @@
         project showcase contains
         numerous examples of my deep understanding of these principles.
     </p>
-    <div class="snippet-container" v-if="$mq === 'desktop'">
+    <div class="snippet-container" :class="$mq">
         <div class="snippet">
             <p class="title">
-                "Monster" Battle Simulator - Java - Data Structures
+                "Monster" Battle Simulator - Java<span v-if="$mq !== 'mobile'"> - Data Structures</span>
             </p>
-            <br />
-            <pre><code class="code">// Player.java
+            <br v-if="$mq !== 'mobile'"/>
+            <pre><code class="code"><span v-if="$mq !== 'mobile'">// Player.java</span>
 public abstract class Player {
     // ------------- Fields ----------------------------------------
     private final String name;
@@ -23,9 +23,9 @@ public abstract class Player {
 
     // ------------- Constructor -----------------------------------
     protected Player(String n, Monster[] m) {
-        name = n;
+        <span v-if="$mq !== 'mobile'">name = n;
         monsters = m;
-        System.out.printf("\n%s selected %s, %s, and %s.\n\n", ...
+        System.out.printf("\n%s selected %s, %s, and %s.\n\n",</span> ...
     }
 
     // ------------- Abstract methods ------------------------------
@@ -34,7 +34,7 @@ public abstract class Player {
 
     ...</code></pre>
         </div>
-        <div class="snippet">
+        <div class="snippet" v-if="$mq === 'desktop'">
             <pre><code class="code">// GameDriver.java
 // initialise Player array
 Player[] players = new Player[2];

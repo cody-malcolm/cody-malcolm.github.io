@@ -14,7 +14,7 @@
             file formats:
         </p>
         <ul class="list">
-            <li class="li" :class="$mq" v-for="fileFormat in fileFormats" :key="fileFormat">
+            <li class="li ff" :class="$mq" v-for="fileFormat in fileFormats" :key="fileFormat">
                 {{ fileFormat }}
             </li>
         </ul>

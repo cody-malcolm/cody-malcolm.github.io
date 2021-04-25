@@ -178,7 +178,7 @@ export default {
     text-align: center;
 }
 
-.carousel::v-deep .snippet-container {
+.carousel::v-deep .snippet-container.desktop {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -188,13 +188,25 @@ export default {
     background-color: hsl(0, 0%, 8%);
     border: 3px solid hsl(0, 0%, 0%);
     border-radius: 0.5rem;
-    margin: 1rem 0;
     padding: 0.5rem;
+}
+
+.carousel::v-deep .snippet.desktop {
+    margin: 1rem 0;
+}
+
+.carousel::v-deep .snippet.mobile {
+    margin: 0.5rem 0;
 }
 
 .carousel::v-deep .code {
     font-family: monospace;
     font-size: 1rem;
+    color: hsl(0, 0%, 90%);
+}
+.carousel::v-deep .code.mobile {
+    font-family: monospace;
+    font-size: 0.65rem;
     color: hsl(0, 0%, 90%);
 }
 </style>
