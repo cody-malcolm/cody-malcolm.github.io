@@ -35,6 +35,7 @@ export default {
 .a.mobile {
     font-size: 1.5rem;
     padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
 }
 
 .a:hover {

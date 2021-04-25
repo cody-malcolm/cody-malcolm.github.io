@@ -53,7 +53,8 @@ export default {
 }
 
 .main-display.mobile {
-    height: 90vh;
+    min-height: 90vh;
+    height: 100%;
 }
 
 </style>
