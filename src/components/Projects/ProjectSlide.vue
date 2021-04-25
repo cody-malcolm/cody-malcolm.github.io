@@ -1,33 +1,64 @@
 <template lang="html">
-<div class="container">
-    <div class="left-container">
-        <div class="section">
-            <p class="p">
-                Project name: {{ project.name }}
-            </p>
+<div class="">
+    <mq-layout mq="laptop+">
+        <div class="container">
+            <div class="left-container">
+                <div class="section">
+                    <p class="p">
+                        Project name: {{ project.name }}
+                    </p>
+                </div>
+                <div class="section">
+                    <p class="p">
+                        Technologies used:
+                    </p>
+                    <ul class="list">
+                        <li class="li" v-for="tech in project.techs" :key="tech">
+                            {{ tech }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <p class="p">
+                        Description:
+                    </p>
+                    <p class="p">
+                        {{ project.description }}
+                    </p>
+                </div>
+            </div>
+            <div class="right-container">
+                <img class="img" :src="require('@/assets/images/projects/' + project.img)" :alt="'screenshot of ' + project.name">
+            </div>
         </div>
-        <div class="section">
-            <p class="p">
-                Technologies used:
-            </p>
-            <ul class="list">
-                <li class="li" v-for="tech in project.techs" :key="tech">
-                    {{ tech }}
-                </li>
-            </ul>
+    </mq-layout>
+    <mq-layout mq="mobile">
+        <div class="mobile-container">
+            <div>
+                <p class="p">
+                    Project name: {{ project.name }}
+                </p>
+            </div>
+            <div>
+                <p class="p">
+                    Technologies used:
+                </p>
+                <ul class="list">
+                    <li class="li" v-for="tech in project.techs" :key="tech">
+                        {{ tech }}
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <p class="p">
+                    Description:
+                </p>
+                <p class="p">
+                    {{ project.description }}
+                </p>
+            </div>
         </div>
-        <div class="section">
-            <p class="p">
-                Description:
-            </p>
-            <p class="p">
-                {{ project.description }}
-            </p>
-        </div>
-    </div>
-    <div class="right-container">
-        <img class="img" :src="require('@/assets/images/projects/' + project.img)" :alt="'screenshot of ' + project.name">
-    </div>
+    </mq-layout>
 </div>
 </template>
 
@@ -52,6 +83,7 @@ export default {
 .list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .li {
     margin-right: 2rem;
@@ -63,8 +95,14 @@ export default {
     font-size: 1.25rem;
     word-spacing: 0.5rem;
     margin: 0.5rem 0;
+    text-align: center;
 }
 
+.mobile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .left-container {
     width: 50%;

@@ -13,19 +13,25 @@
                 for more details.
             </p>
         </div>
-        <div class="controls">
-            <div class="step-controls">
-                <button @click="previous" class="button">Previous</button>
-                <button @click="next" class="button">Next</button>
+        <mq-layout mq="laptop+">
+            <div class="controls">
+                    <div class="step-controls">
+                        <button @click="previous" class="button desktop">Previous</button>
+                        <button @click="next" class="button desktop">Next</button>
+                    </div>
+                    <div class="jump-controls">
+                        <button @click="goTo(0)" class="button desktop">Ataxx<br />Java/JavaFX</button>
+                        <button @click="goTo(1)" class="button desktop">FileSharer<br />Java/JavaFX</button>
+                        <button @click="goTo(2)" class="button desktop">Twitter Clone<br />Full Stack Web</button>
+                        <button @click="goTo(3)" class="button desktop">Etch a Sketch<br />Front End Web</button>
+                        <button @click="goTo(4)" class="button desktop">Portfolio Website<br />Vue and Node</button>
+                    </div>
             </div>
-            <div class="jump-controls">
-                <button @click="goTo(0)" class="button">Ataxx<br />Java/JavaFX</button>
-                <button @click="goTo(1)" class="button">FileSharer<br />Java/JavaFX</button>
-                <button @click="goTo(2)" class="button">Twitter Clone<br />Full Stack Web</button>
-                <button @click="goTo(3)" class="button">Etch a Sketch<br />Front End Web</button>
-                <button @click="goTo(4)" class="button">Portfolio Website<br />Vue and Node</button>
-            </div>
-        </div>
+        </mq-layout>
+        <mq-layout mq="mobile">
+            <button @click="previous" class="button mobile">Prev</button>
+            <button @click="next" class="button mobile">Next</button>
+        </mq-layout>
     </div>
 </div>
 </template>
@@ -158,6 +164,7 @@ export default {
     font-family: "Manifold Extended";
     font-size: 1.25rem;
     word-spacing: 0.25rem;
+    text-align: center;
 }
 
 .a {
@@ -202,12 +209,19 @@ export default {
 
 .button {
     outline: none;
-    width: 16rem;
     background-color: hsl(0, 0%, 0%);
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
     font-size: 1.25rem;
     margin: 0.25rem;
+}
+
+.button.desktop {
+    width: 16rem;
+}
+
+.button.mobile {
+    width: 8rem;
 }
 
 .button:hover {
@@ -225,6 +239,9 @@ export default {
 }
 
 .inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 90%;
 }
 </style>
