@@ -1,11 +1,11 @@
 <template lang="html">
 <section class="section">
-    <p class="p">
+    <p class="p" :class="$mq">
         I always strive to make my programs as robust as possible,
         guarding against incorrect or malicious user input, edge cases,
         and other possible exceptions.
     </p>
-    <div class="snippet-container">
+    <div class="snippet-container" v-if="$mq === 'desktop'">
         <div class="snippet">
             <p class="title">
                 File I/O Lab Assignment - C++ - Programming Workshop II

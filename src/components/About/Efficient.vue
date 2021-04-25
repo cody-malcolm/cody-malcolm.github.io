@@ -1,6 +1,6 @@
 <template lang="html">
 <section class="section">
-    <p class="p">
+    <p class="p" :class="$mq">
         I chose a minor in Mathematics because it's also important to me
         that the software I write is efficient, logically sound, and behaves
         as expected. For this, I've taken classes in Statistics, Discrete
@@ -8,7 +8,7 @@
         Probability - with demonstrated success comparable to
         that of my programming classes.
     </p>
-    <div class="snippet-container">
+    <div class="snippet-container" v-if="$mq === 'desktop'">
         <div class="image">
             <img src="@/assets/images/lower_triangular_mult.png" alt="LaTeX pseudocode" />
         </div>
@@ -30,6 +30,7 @@ def lower_mult(A, B):
     return C</code></pre>
         </div>
     </div>
+    <!-- <p class="p" v-else>Testing</p> -->
 </section>
 </template>
 

@@ -1,13 +1,13 @@
 <template lang="html">
 <section class="section">
-    <p class="p">
+    <p class="p" :class="$mq">
         When designing an application, I make sure to properly utilize all
         appropriate object-oriented design principles in order
         to produce a project that is modular, maintainable, and DRY. My
         project showcase contains
         numerous examples of my deep understanding of these principles.
     </p>
-    <div class="snippet-container">
+    <div class="snippet-container" v-if="$mq === 'desktop'">
         <div class="snippet">
             <p class="title">
                 "Monster" Battle Simulator - Java - Data Structures

@@ -1,6 +1,6 @@
 <template lang="html">
 <div class="outer-container">
-    <div class="inner-container">
+    <div class="inner-container" :class="$mq">
         <VueSlickCarousel class="carousel" ref="carousel" v-bind="settings">
             <Me class="slide" />
             <Clean class="slide" />
@@ -8,9 +8,9 @@
             <Efficient class="slide" />
             <Designs class="slide" />
         </VueSlickCarousel>
-        <div class="controls">
+        <div class="controls" :class="$mq">
             <button @click="previous" class="button">Previous</button>
-            <div>
+            <div v-if="$mq === 'desktop'">
                 <button @click="goTo(0)" class="button">About</button>
                 <button @click="goTo(1)" class="button">Clean</button>
                 <button @click="goTo(2)" class="button">Robust</button>
@@ -19,7 +19,7 @@
             </div>
             <button @click="next" class="button">Next</button>
         </div>
-        <div class="auto-controls">
+        <div class="auto-controls" v-if="$mq === 'desktop'">
             <button @click="pause" ref="pauseButton" class="auto button" style="display: none;">Pause</button>
             <button @click="autoplay" ref="autoplayButton" class="auto button">Autoplay</button>
         </div>
@@ -101,9 +101,14 @@ export default {
     width: 100%;
 }
 
-.controls {
+.controls.desktop {
     display: flex;
     justify-content: space-between;
+}
+
+.controls.mobile {
+    display: flex;
+    justify-content: space-around;
 }
 
 .auto-controls {
@@ -136,18 +141,33 @@ export default {
 }
 
 .inner-container {
-    width: 80%;
     display: flex;
     flex-direction: column;
+}
+
+.inner-container.desktop {
+    width: 80%;
+}
+
+.inner-container.mobile {
+    width: 95%;
 }
 
 .carousel::v-deep .p {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
+    word-spacing: 0.5rem;
+}
+
+.carousel::v-deep .p.desktop {
     font-size: 1.25rem;
     margin: 1rem 0;
-    word-spacing: 0.5rem;
     text-align: justify;
+}
+
+.carousel::v-deep .p.mobile {
+    font-size: 1rem;
+    margin: 0.75rem 0;
 }
 
 .carousel::v-deep .title {

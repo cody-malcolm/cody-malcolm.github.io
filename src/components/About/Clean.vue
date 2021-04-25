@@ -1,12 +1,12 @@
 <template lang="html">
 <section class="section">
-    <p class="p">
+    <p class="p" :class="$mq">
         I pride myself on writing code that is clean, semantic, and
         well-documented both internally and externally. I always adhere to best
         practices, even though it is fun to write brilliant one-line methods on
         websites like Code Wars.
     </p>
-    <div class="snippet-container">
+    <div class="snippet-container" v-if="$mq === 'desktop'">
         <div class="snippet">
             <p class="title">
                 "Monster" Battle Simulator - Java - Data Structures
