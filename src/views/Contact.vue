@@ -1,39 +1,56 @@
 <template lang="html">
 <div class="outer-container">
-    <div class="inner-container">
+    <div class="inner-container" :class="$mq">
         <div class="contact-info">
-            <p class="p">Thank you for your interest!</p>
-            <p class="p">
+            <p class="p" :class="$mq">Thank you for your interest!</p>
+            <p class="p" :class="$mq">
                 To get in touch,<br />please use the form below<br /> or connect on
                 <a  href="https://www.linkedin.com/in/cody-malcolm/"
-                    class="a"
+                    class="a" :class="$mq"
                     target="_blank">
                     LinkedIn</a>.
             </p>
         </div>
-        <form id="form" class="form" action="https://formspree.io/f/xqkwajjr" method="POST" @submit.prevent="handleSubmit">
-            <div class="form-inputs">
-                <div class="form-column labels">
-                    <label class="label" for="name">Name:</label>
-                    <label class="label" for="company">Company:</label>
-                    <label class="label" for="_replyto">Email:</label>
-                    <label class="label" for="message">Message:</label>
+        <mq-layout mq="desktop">
+            <form id="form" class="form" action="https://formspree.io/f/xqkwajjr" method="POST" @submit.prevent="handleSubmit">
+                <div class="form-inputs">
+                    <div class="form-column labels">
+                        <label class="label" :class="$mq" for="name">Name:</label>
+                        <label class="label" :class="$mq" for="company">Company:</label>
+                        <label class="label" :class="$mq" for="_replyto">Email:</label>
+                        <label class="label" :class="$mq" for="message">Message:</label>
+                    </div>
+                    <div class="form-column inputs">
+                        <input @input="handleInput" v-model="form.name" class="input" type="text" name="name" required />
+                        <input @input="handleInput" v-model="form.company" class="input" type="text" name="company" />
+                        <input @input="handleInput" v-model="form._replyto" class="input" type="email" name="_replyto" required />
+                        <textarea @input="handleInput" v-model="form.message" class="input textarea" name="message" required />
+                        <button class="button" id="submit" type="submit">{{ submitText }}</button>
+                    </div>
+                    <div class="form-column required">
+                        <p class="small">*required</p>
+                        <p class="small">*optional</p>
+                        <p class="small">*required</p>
+                        <p class="small">*required</p>
+                    </div>
                 </div>
-                <div class="form-column inputs">
-                    <input @input="handleInput" v-model="form.name" class="input" type="text" name="name" required />
-                    <input @input="handleInput" v-model="form.company" class="input" type="text" name="company" />
-                    <input @input="handleInput" v-model="form._replyto" class="input" type="email" name="_replyto" required />
+            </form>
+        </mq-layout>
+        <mq-layout mq="mobile">
+            <form id="form" class="form" action="https://formspree.io/f/xqkwajjr" method="POST" @submit.prevent="handleSubmit">
+                <div class="form-inputs" :class="$mq">
+                    <label class="label" :class="$mq" for="name">Name*</label>
+                    <input @input="handleInput" v-model="form.name" class="input mobile" type="text" name="name" required />
+                    <label class="label" :class="$mq" for="company">Company</label>
+                    <input @input="handleInput" v-model="form.company" class="input mobile" type="text" name="company" />
+                    <label class="label" :class="$mq" for="_replyto">Email*</label>
+                    <input @input="handleInput" v-model="form._replyto" class="input mobile" type="email" name="_replyto" required />
+                    <label class="label" :class="$mq" for="message">Message*</label>
                     <textarea @input="handleInput" v-model="form.message" class="input textarea" name="message" required />
                     <button class="button" id="submit" type="submit">{{ submitText }}</button>
                 </div>
-                <div class="form-column required">
-                    <p class="small">*required</p>
-                    <p class="small">*optional</p>
-                    <p class="small">*required</p>
-                    <p class="small">*required</p>
-                </div>
-            </div>
-        </form>
+            </form>
+        </mq-layout>
     </div>
 </div>
 </template>
@@ -88,7 +105,14 @@ export default {
     width: 60%;
     display: flex;
     flex-direction: column;
+}
+
+.inner-container.desktop {
     padding-top: 2rem;
+}
+
+.inner-container.mobile {
+    padding-top: 1rem;
 }
 
 .form, .contact-info {
@@ -103,6 +127,11 @@ export default {
     justify-content: center;
 }
 
+.form-inputs.mobile {
+    flex-direction: column;
+    align-items: center;
+}
+
 .form-column {
     display: flex;
     flex-direction: column;
@@ -111,12 +140,19 @@ export default {
 .label {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
-    height: 1.25rem;
+}
+
+.label.desktop {
     border: 1px solid hsla(0, 0%, 0%, 0);
     margin: 0.5rem;
     padding: 0.25rem;
     font-size: 1.25rem;
+    height: 1.25rem;
     vertical-align: middle;
+}
+
+.label.mobile {
+    font-size: 1rem;
 }
 
 .labels {
@@ -133,6 +169,9 @@ export default {
     background-color: hsl(0, 0%, 77%);
 }
 
+.input.mobile {
+    width: 100%;
+}
 .textarea {
     height: 6rem;
     width: 20rem;
@@ -156,10 +195,18 @@ export default {
 .p {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
-    font-size: 1.75rem;
-    margin: 0 0 2rem;
     word-spacing: 0.5rem;
     text-align: center;
+}
+
+.p.desktop {
+    font-size: 1.75rem;
+    margin: 0 0 2rem;
+}
+
+.p.mobile {
+    font-size: 1.25rem;
+    margin: 0 0 1rem;
 }
 
 .a {
