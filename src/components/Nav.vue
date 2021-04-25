@@ -5,7 +5,8 @@
             Cody Malcolm
         </h1>
     </div>
-    <mq-layout mq="laptop+">
+    <!-- desktop layout -->
+    <mq-layout mq="desktop">
         <div class="links-container">
             <div class="link-container">
                 <router-link class="nav" to="/">Welcome</router-link>
@@ -24,6 +25,7 @@
             </div>
         </div>
     </mq-layout>
+    <!-- mobile burger menu -->
     <mq-layout mq="mobile">
         <div class="links-menu">
             <div class="burger" @click="toggle">
@@ -58,10 +60,12 @@ export default {
     name: 'Nav',
     data() {
         return {
+            // whether the burger menu is active ie. displayed
             active: false
         };
     },
     methods: {
+        // toggle display of burger menu
         toggle: function() {
             this.active = !this.active;
         }
@@ -70,7 +74,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
+/* style name and header */
 .h1 {
     font-family: "Manifold Extended Heavy";
     cursor: default;
@@ -80,7 +84,6 @@ export default {
 
 .h1.desktop {
     font-size: 3rem;
-
 }
 
 .h1.mobile {
@@ -92,21 +95,14 @@ export default {
     color: hsl(0, 0%, 70%);
 }
 
-/* @keyframes pulsing {
-    0% {
-        box-shadow: 0 0 0.25rem hsl(0, 0%, 55%), inset 0 0 0.25rem hsl(0, 0%, 55%);
-    }
-    100% {
-        box-shadow: 0 0 0.75rem hsl(0, 0%, 70%), inset 0 0 0.75rem hsl(0, 0%, 70%);
-    }
-} */
-
+/* style full width link container */
 .links-container {
     display: flex;
     justify-content: space-around;
     height: 7vh;
 }
 
+/* an individual link container */
 .link-container {
     display: flex;
     justify-content: center;
@@ -114,12 +110,14 @@ export default {
     width: 20%;
 }
 
+/* for the burger menu */
 .links-menu {
     height: 5vh;
     display: flex;
     justify-content: center;
 }
 
+/* style and position name container */
 .name-container {
     display: flex;
     flex-direction: column;
@@ -134,6 +132,7 @@ export default {
     height: 5vh;
 }
 
+/* burger menu */
 .burger {
     width: 33px;
     height: 33px;
@@ -156,15 +155,17 @@ export default {
 .mid.active {
     visibility: hidden;
 }
+
 .bot.active {
     transform: translateY(-11px) rotateZ(45deg);
 }
 
+/* mobile menu */
 .mobile-menu {
     position: absolute;
     top: 66px;
     background-color: hsl(0, 0%, 0%);
-    z-index: 1;
+    z-index: 1; /* needed for projects/about due to carousel side effects */
 }
 
 .mobile-link-container {

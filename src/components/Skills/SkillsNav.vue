@@ -21,13 +21,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-/* .a {
-    color: hsl(0, 0%, 70%);
-    font-family: "Manifold Extended";
-    font-size: 1.5rem;
-    text-decoration: none;
-    border-radius: 100rem;
-} */
+/* style and position the nav bar */
 .nav.desktop {
     font-size: 1.5rem;
     padding: 0.75rem 1.25rem;
@@ -38,12 +32,7 @@ export default {
     margin: 0.25rem 0;
 }
 
-/* .a:hover {
-    color: hsl(0, 0%, 55%);
-	animation: pulsing 800ms ease-out infinite alternate;
-	border-color: hsl(0, 0%, 0%);
-} */
-
+/* styles for the links container */
 .links-container {
     display: flex;
     background-color: hsl(0, 0%, 0%);
@@ -59,6 +48,7 @@ export default {
     align-items: center;
 }
 
+/* style for an individual link container */
 .link-container {
     display: flex;
     justify-content: center;

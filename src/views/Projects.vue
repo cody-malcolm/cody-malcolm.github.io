@@ -2,10 +2,10 @@
 <div class="outer-container">
     <div class="inner-container">
         <!-- 3 parts - carousel slides, github link, and navigation buttons  -->
-        <!-- Note:   It would be semantically preferable to have the github link
-                be part of the slides. This is unfortunately not possible
-                because of the way vue-slick-carousel is implemented, links
-                don't appear where they display within the carousel. -->
+        <!-- Note:  It would be semantically preferable to have the github link
+                    be part of the slides. This is unfortunately not possible
+                    because of the way vue-slick-carousel is implemented, links
+                    don't appear where they display within the carousel. -->
         <!-- carousel slides  -->
         <VueSlickCarousel class="carousel" ref="carousel" v-bind="settings">
             <ProjectSlide v-for="project in projects" v-bind:project="project" :key="project.name" />
@@ -22,7 +22,7 @@
         </div>
         <!-- navigation buttons  -->
         <!-- only desktop shows direct navigation buttons -->
-        <mq-layout mq="laptop+">
+        <mq-layout mq="desktop">
             <div class="controls">
                 <div class="step-controls">
                     <button @click="previous" class="button desktop">Previous</button>

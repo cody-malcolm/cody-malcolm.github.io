@@ -30,13 +30,13 @@
 <script>
 import VueSlickCarousel from 'vue-slick-carousel';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
-
 import Me from '@/components/About/Me.vue';
 import Clean from '@/components/About/Clean.vue';
 import Robust from '@/components/About/Robust.vue';
 import Efficient from '@/components/About/Efficient.vue';
 import Designs from '@/components/About/Designs.vue';
 
+// carousel settings
 const settings = {
     dots: false,
     arrows: false,
@@ -64,21 +64,26 @@ export default {
         };
     },
     methods: {
+        // advance to next slide
         next() {
             this.$refs.carousel.next();
         },
+        // return to previous slide
         previous() {
             this.$refs.carousel.prev();
         },
+        // goto specific slide
         goTo(index) {
             this.$refs.carousel.goTo(index);
         },
+        // turn autoplay on, hide autoplay button, show pause button, advance slide
         autoplay() {
             this.$refs.carousel.play();
             this.$refs.carousel.next();
             this.$refs.autoplayButton.style.display = "none";
             this.$refs.pauseButton.style.display = "inline";
         },
+        // turn autoplay off, hide pause button, show autoplay button
         pause() {
             this.$refs.carousel.pause();
             this.$refs.autoplayButton.style.display = "inline";
@@ -89,18 +94,20 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.slide {
-    outline: none;
-}
-
+/* carousel styling */
 .carousel {
     width: 100vw;
+}
+
+.slide {
+    outline: none;
 }
 
 .slick-slider {
     width: 100%;
 }
 
+/* controls styling */
 .controls.desktop {
     display: flex;
     justify-content: space-between;
@@ -121,11 +128,12 @@ export default {
     font-size: 1.25rem;
 }
 
+/* styling for child components */
+/* styling and positioning of text content */
 .carousel::v-deep .em {
     font-style: italic;
 }
 
-/* .carousel::v-deep.p was 0.5 word spacing here, */
 .carousel::v-deep .p.desktop {
     font-size: 1.25rem;
     margin: 1rem 0;
@@ -137,6 +145,7 @@ export default {
     margin: 0.75rem 0;
 }
 
+/* positioning and styling of code snippets */
 .carousel::v-deep .title {
     font-size: 0.75rem;
     text-align: center;
@@ -165,12 +174,14 @@ export default {
 
 .carousel::v-deep .code {
     font-family: monospace;
-    font-size: 1rem;
     color: hsl(0, 0%, 90%);
+
 }
+.carousel::v-deep .code.desktop {
+    font-size: 1rem;
+}
+
 .carousel::v-deep .code.mobile {
-    font-family: monospace;
     font-size: 0.65rem;
-    color: hsl(0, 0%, 90%);
 }
 </style>
