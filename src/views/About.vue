@@ -20,8 +20,17 @@
             <button @click="next" class="button">Next</button>
         </div>
         <div class="auto-controls" v-if="$mq === 'desktop'">
-            <button @click="pause" ref="pauseButton" class="auto button" style="display: none;">Pause</button>
-            <button @click="autoplay" ref="autoplayButton" class="auto button">Autoplay</button>
+            <button @click="pause"
+                    ref="pauseButton"
+                    class="auto button"
+                    style="display: none;">
+                Pause
+            </button>
+            <button @click="autoplay"
+                    ref="autoplayButton"
+                    class="auto button">
+                Autoplay
+            </button>
         </div>
     </div>
 </div>

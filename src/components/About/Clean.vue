@@ -27,7 +27,10 @@ private float speedMultiplier() {
         </div>
         <div class="snippet" :class="$mq">
             <p class="title">
-                FileSharer - Java<span v-if="$mq !== 'mobile'"> - Software Systems Development</span>
+                FileSharer - Java
+                <span v-if="$mq !== 'mobile'">
+                    - Software Systems Development
+                </span>
             </p>
             <br v-if="$mq !== 'mobile'" />
             <pre><code class="code" :class="$mq">private static void stopListening(boolean notify) {

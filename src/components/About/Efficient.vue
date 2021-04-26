@@ -1,16 +1,18 @@
 <template lang="html">
 <section class="section">
     <p class="p" :class="$mq">
-        I chose a minor in Mathematics because it's also important to me
-        that the software I write is efficient, logically sound, and behaves
-        as expected. For this, I've taken classes in Statistics, Discrete
-        Mathematics, Computational Science, Optimization, and soon
-        Probability - with demonstrated success comparable to
-        that of my programming classes.
+        I chose a minor in Mathematics because it's also important to me that
+        the software I write is efficient, logically sound, and behaves as
+        expected. For this, I've taken classes in Statistics, Discrete
+        Mathematics, Computational Science, Optimization, and soon Probability
+        - with demonstrated success comparable to that of my programming classes.
     </p>
     <div class="snippet-container" :class="$mq">
         <div class="image">
-            <img src="@/assets/images/lower_triangular_mult.png" alt="LaTeX pseudocode" class="img" :class="$mq"/>
+            <img    src="@/assets/images/lower_triangular_mult.png"
+                    alt="LaTeX pseudocode"
+                    class="img"
+                    :class="$mq"/>
         </div>
         <div class="snippet" v-if="$mq === 'desktop'">
             <p class="title">

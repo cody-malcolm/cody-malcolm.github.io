@@ -8,7 +8,9 @@
                     don't appear where they display within the carousel. -->
         <!-- carousel slides  -->
         <VueSlickCarousel class="carousel" ref="carousel" v-bind="settings">
-            <ProjectSlide v-for="project in projects" v-bind:project="project" :key="project.name" />
+            <ProjectSlide   v-for="project in projects"
+                            v-bind:project="project"
+                            :key="project.name" />
         </VueSlickCarousel>
         <!-- github link  -->
         <div class="github">
@@ -25,22 +27,40 @@
         <mq-layout mq="desktop">
             <div class="controls">
                 <div class="step-controls">
-                    <button @click="previous" class="button desktop">Previous</button>
-                    <button @click="next" class="button desktop">Next</button>
+                    <button @click="previous" class="button desktop">
+                        Previous
+                    </button>
+                    <button @click="next" class="button desktop">
+                        Next
+                    </button>
                 </div>
                 <div class="jump-controls">
-                    <button @click="goTo(0)" class="button desktop">Ataxx<br />Java/JavaFX</button>
-                    <button @click="goTo(1)" class="button desktop">FileSharer<br />Java/JavaFX</button>
-                    <button @click="goTo(2)" class="button desktop">Twitter Clone<br />Full Stack Web</button>
-                    <button @click="goTo(3)" class="button desktop">Etch a Sketch<br />Front End Web</button>
-                    <button @click="goTo(4)" class="button desktop">Portfolio Website<br />Vue and Node</button>
+                    <button @click="goTo(0)" class="button desktop">
+                        Ataxx<br />Java/JavaFX
+                    </button>
+                    <button @click="goTo(1)" class="button desktop">
+                        FileSharer<br />Java/JavaFX
+                    </button>
+                    <button @click="goTo(2)" class="button desktop">
+                        Twitter Clone<br />Full Stack Web
+                    </button>
+                    <button @click="goTo(3)" class="button desktop">
+                        Etch a Sketch<br />Front End Web
+                    </button>
+                    <button @click="goTo(4)" class="button desktop">
+                        Portfolio Website<br />Vue and Node
+                    </button>
                 </div>
             </div>
         </mq-layout>
         <mq-layout mq="mobile">
             <div class="controls">
-                <button @click="previous" class="button mobile">Prev</button>
-                <button @click="next" class="button mobile">Next</button>
+                <button @click="previous" class="button mobile">
+                    Prev
+                </button>
+                <button @click="next" class="button mobile">
+                    Next
+                </button>
             </div>
         </mq-layout>
     </div>

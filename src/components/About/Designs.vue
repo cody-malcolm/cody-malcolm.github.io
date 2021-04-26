@@ -10,7 +10,10 @@
     <div class="snippet-container" :class="$mq">
         <div class="snippet" :class="$mq">
             <p class="title">
-                "Monster" Battle Simulator - Java<span v-if="$mq !== 'mobile'"> - Data Structures</span>
+                "Monster" Battle Simulator - Java
+                <span v-if="$mq !== 'mobile'">
+                    - Data Structures
+                </span>
             </p>
             <br v-if="$mq !== 'mobile'"/>
             <pre><code class="code" :class="$mq"><span v-if="$mq !== 'mobile'">// Player.java</span>

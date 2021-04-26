@@ -12,7 +12,10 @@
                 Technologies used:
             </p>
             <ul class="list" :class="$mq">
-                <li class="li" :class="$mq" v-for="tech in project.techs" :key="tech">
+                <li class="li"
+                    :class="$mq"
+                    v-for="tech in project.techs"
+                    :key="tech">
                     {{ tech }}
                 </li>
             </ul>
@@ -28,7 +31,9 @@
     </div>
     <!-- only render right container (image) on desktop  -->
     <div class="right-container" v-if="$mq === 'desktop'">
-        <img class="img" :src="require('@/assets/images/projects/' + project.img)" :alt="'screenshot of ' + project.name">
+        <img    class="img"
+                :src="require('@/assets/images/projects/' + project.img)"
+                :alt="'screenshot of ' + project.name">
     </div>
 </div>
 </template>
@@ -65,17 +70,20 @@ export default {
     margin: 0 1rem;
 }
 
-.p, .list {
+.p,
+.list {
     margin: 0.5rem 0;
 }
 
-.p.desktop, .list.desktop {
+.p.desktop,
+.list.desktop {
     font-size: 1.25rem;
     word-spacing: 0.5rem;
     margin: 0.5rem 0;
 }
 
-.p.mobile, .list.mobile {
+.p.mobile,
+.list.mobile {
     font-size: 1.0rem;
     word-spacing: 0.5rem;
     margin: 0.5rem 0;

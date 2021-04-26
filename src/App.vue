@@ -63,7 +63,11 @@ export default {
 }
 
 /* set basic common styling of elements */
-.p, .li, .label, .title, .img {
+.p,
+.li,
+.label,
+.title,
+.img {
     color: hsl(0, 0%, 70%);
     font-family: "Manifold Extended";
     word-spacing: 0.25rem;
@@ -79,7 +83,8 @@ export default {
     color: hsl(0, 0%, 45%);
 }
 
-.button, .input {
+.button,
+.input {
     outline: none;
     font-family: "Manifold Extended";
 }

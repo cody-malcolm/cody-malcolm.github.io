@@ -5,7 +5,10 @@
             Some miscellaneous tools I'm familiar with are:
         </p>
         <ul class="list">
-            <li class="li" :class="$mq" v-for="tool in tools" :key="tool">
+            <li class="li"
+                :class="$mq"
+                v-for="tool in tools"
+                :key="tool">
                 {{ tool }}
             </li>
         </ul>
@@ -14,7 +17,10 @@
             file formats:
         </p>
         <ul class="list">
-            <li class="li ff" :class="$mq" v-for="fileFormat in fileFormats" :key="fileFormat">
+            <li class="li ff"
+                :class="$mq"
+                v-for="fileFormat in fileFormats"
+                :key="fileFormat">
                 {{ fileFormat }}
             </li>
         </ul>

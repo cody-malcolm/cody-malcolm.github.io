@@ -1,9 +1,14 @@
 <template lang="html">
 <div class="outer-container">
     <div class="inner-container" :class="$mq">
-        <p class="p" :class="$mq">I have recent experience with the following languages:</p>
+        <p class="p" :class="$mq">
+            I have recent experience with the following languages:
+        </p>
         <ul class="list">
-            <li class="li" :class="$mq" v-for="language in languages" :key="language">
+            <li class="li"
+                :class="$mq"
+                v-for="language in languages"
+                :key="language">
                 {{ language }}
             </li>
         </ul>

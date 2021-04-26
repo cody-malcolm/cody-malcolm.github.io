@@ -19,8 +19,10 @@
         Recent additions include JavaFX, Gradle, socket communications, Node,
         React, Vue, Express, SQLite, and MongoDB. You can see many of these
         skills on display in the Ataxx and Twitter Clone projects.
-        <span v-if="$mq !== 'mobile'"> This summer, my primary focus will be Ruby
-            on Rails and building out my portfolio.</span>
+        <span v-if="$mq !== 'mobile'">
+            This summer, my primary focus will be Ruby on Rails and building out
+            my portfolio.
+        </span>
     </p>
 </section>
 </template>

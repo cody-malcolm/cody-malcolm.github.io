@@ -6,7 +6,10 @@
             libraries:
         </p>
         <ul class="list">
-            <li class="li" :class="$mq" v-for="framework in frameworks" :key="framework">
+            <li class="li"
+                :class="$mq"
+                v-for="framework in frameworks"
+                :key="framework">
                 {{ framework }}
             </li>
         </ul>

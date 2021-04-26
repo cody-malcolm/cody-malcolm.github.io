@@ -3,39 +3,88 @@
     <div class="inner-container" :class="$mq">
         <!-- content -->
         <div class="contact-info">
-            <p class="p" :class="$mq">Thank you for your interest!</p>
             <p class="p" :class="$mq">
-                To get in touch,<br />please use the form below<br /> or connect on
+                Thank you for your interest!
+            </p>
+            <p class="p" :class="$mq">
+                To get in touch,<br />please use the form below<br /> or connect
+                on
                 <a  href="https://www.linkedin.com/in/cody-malcolm/"
-                    class="a" :class="$mq"
+                    class="a"
+                    :class="$mq"
                     target="_blank">
-                    LinkedIn</a>.
+                    LinkedIn
+                </a>.
             </p>
         </div>
         <!-- form -->
-        <form id="form" class="form" action="https://formspree.io/f/xqkwajjr" method="POST" @submit.prevent="handleSubmit">
+        <form   id="form"
+                class="form"
+                action="https://formspree.io/f/xqkwajjr"
+                method="POST"
+                @submit.prevent="handleSubmit">
             <div class="form-inputs">
                 <div class="form-input" :class="$mq">
-                    <label class="label" :class="$mq" for="name">Name*</label>
-                    <input @input="handleInput" v-model="form.name" class="input" :class="$mq" type="text" name="name" required />
-                    <p class="p tiny" v-if="$mq === 'desktop'">*required</p>
+                    <label class="label" :class="$mq" for="name">
+                        Name<span v-if="$mq === 'mobile'">*</span>
+                    </label>
+                    <input  @input="handleInput"
+                            v-model="form.name"
+                            class="input"
+                            :class="$mq"
+                            type="text"
+                            name="name"
+                            required />
+                    <p class="p tiny" v-if="$mq === 'desktop'">
+                        *required
+                    </p>
                 </div>
                 <div class="form-input" :class="$mq">
-                    <label class="label" :class="$mq" for="company">Company</label>
-                    <input @input="handleInput" v-model="form.company" class="input" :class="$mq" type="text" name="company" />
-                    <p class="p tiny" v-if="$mq === 'desktop'">*optional</p>
+                    <label class="label" :class="$mq" for="company">
+                        Company
+                    </label>
+                    <input  @input="handleInput"
+                            v-model="form.company"
+                            class="input"
+                            :class="$mq"
+                            type="text"
+                            name="company" />
+                    <p class="p tiny" v-if="$mq === 'desktop'">
+                        *optional
+                    </p>
                 </div>
                 <div class="form-input" :class="$mq">
-                    <label class="label" :class="$mq" for="_replyto">Email*</label>
-                    <input @input="handleInput" v-model="form._replyto" class="input" :class="$mq" type="email" name="_replyto" required />
-                    <p class="p tiny" v-if="$mq === 'desktop'">*required</p>
+                    <label class="label" :class="$mq" for="_replyto">
+                        Email<span v-if="$mq === 'mobile'">*</span>
+                    </label>
+                    <input  @input="handleInput"
+                            v-model="form._replyto"
+                            class="input"
+                            :class="$mq"
+                            type="email"
+                            name="_replyto"
+                            required />
+                    <p class="p tiny" v-if="$mq === 'desktop'">
+                        *required
+                    </p>
                 </div>
                 <div class="form-input" :class="$mq">
-                    <label class="label" :class="$mq" for="message">Message*</label>
-                    <textarea @input="handleInput" v-model="form.message" class="textarea" :class="$mq" name="message" required />
-                    <p class="p tiny" v-if="$mq === 'desktop'">*required</p>
+                    <label class="label" :class="$mq" for="message">
+                        Message<span v-if="$mq === 'mobile'">*</span>
+                    </label>
+                    <textarea   @input="handleInput"
+                                v-model="form.message"
+                                class="textarea"
+                                :class="$mq"
+                                name="message"
+                                required />
+                    <p class="p tiny" v-if="$mq === 'desktop'">
+                        *required
+                    </p>
                 </div>
-                <button class="button" id="submit" type="submit">{{ submitText }}</button>
+                <button class="button" id="submit" type="submit">
+                    {{ submitText }}
+                </button>
             </div>
         </form>
     </div>
@@ -111,7 +160,8 @@ export default {
 }
 
 /* style and position inputs and labels */
-.input, .textarea {
+.input,
+.textarea {
     padding: 0.25rem;
     border: 1px solid hsl(0, 0%, 0%);
     margin: 0.5rem;

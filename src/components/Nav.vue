@@ -35,19 +35,39 @@
             </div>
             <div class="mobile-menu" v-if="active">
                 <div class="mobile-link-container">
-                    <router-link class="nav" to="/" @click.native="toggle">Welcome</router-link>
+                    <router-link    class="nav"
+                                    to="/"
+                                    @click.native="toggle">
+                        Welcome
+                    </router-link>
                 </div>
                 <div class="mobile-link-container">
-                    <router-link class="nav" to="/projects" @click.native="toggle">Projects</router-link>
+                    <router-link    class="nav"
+                                    to="/projects"
+                                    @click.native="toggle">
+                        Projects
+                    </router-link>
                 </div>
                 <div class="mobile-link-container">
-                    <router-link class="nav" to="/skills" @click.native="toggle">Skills</router-link>
+                    <router-link    class="nav"
+                                    to="/skills"
+                                    @click.native="toggle">
+                        Skills
+                    </router-link>
                 </div>
                 <div class="mobile-link-container">
-                    <router-link class="nav" to="/about" @click.native="toggle">About</router-link>
+                    <router-link    class="nav"
+                                    to="/about"
+                                    @click.native="toggle">
+                        About
+                    </router-link>
                 </div>
                 <div class="mobile-link-container">
-                    <router-link class="nav" to="/contact" @click.native="toggle">Contact</router-link>
+                    <router-link    class="nav"
+                                    to="/contact"
+                                    @click.native="toggle">
+                        Contact
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -141,7 +161,9 @@ export default {
     justify-content: space-around;
 }
 
-.top, .mid, .bot {
+.top,
+.mid,
+.bot {
     background-color: hsl(0, 0%, 70%);
     height: 3px;
     border-radius: 1rem;

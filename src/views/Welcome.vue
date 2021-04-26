@@ -5,16 +5,29 @@
             Welcome to my portfolio showcase.
         </p>
         <p class="p left" :class="$mq">
-            Check out my <router-link class="a" to="/projects">projects,</router-link>
+            Check out my
+            <router-link class="a" to="/projects">
+                projects,
+            </router-link>
         </p>
         <p class="p centered" :class="$mq">
-            see my <router-link class="a" to="/skills">skills,</router-link>
+            see my
+            <router-link class="a" to="/skills">
+                skills,
+            </router-link>
         </p>
         <p class="p right" :class="$mq">
-            and <router-link class="a" to="/about">learn more</router-link> about me,
+            and
+            <router-link class="a" to="/about">
+                learn more
+            </router-link>
+            about me,
         </p>
         <p class="p centered" :class="$mq">
-            then <router-link class="a" to="/contact">get in touch</router-link>
+            then
+            <router-link class="a" to="/contact">
+                get in touch
+            </router-link>
             and let me know how I can help.
         </p>
     </div>

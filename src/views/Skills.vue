@@ -27,7 +27,9 @@ export default {
 
 <style lang="css" scoped>
 /* set text size and positioning for this and child components */
-.category::v-deep .p, .category::v-deep .li, .p {
+.category::v-deep .p,
+.category::v-deep .li,
+.p {
     font-size: 1.75rem;
     margin: 1rem 0;
     text-align: center;

@@ -2,13 +2,19 @@
 <div>
     <div class="links-container" :class="$mq">
         <div class="link-container">
-            <router-link class="nav" :class="$mq" to="/skills/languages">Languages</router-link>
+            <router-link class="nav" :class="$mq" to="/skills/languages">
+                Languages
+            </router-link>
         </div>
         <div class="link-container">
-            <router-link class="nav" :class="$mq" to="/skills/frameworks">Frameworks</router-link>
+            <router-link class="nav" :class="$mq" to="/skills/frameworks">
+                Frameworks
+            </router-link>
         </div>
         <div class="link-container">
-            <router-link class="nav" :class="$mq" to="/skills/tools">Tools</router-link>
+            <router-link class="nav" :class="$mq" to="/skills/tools">
+                Tools
+            </router-link>
         </div>
     </div>
 </div>
