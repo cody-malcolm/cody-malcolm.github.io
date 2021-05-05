@@ -185,12 +185,13 @@ export default {
         next() {
             this.$refs.carousel.next();
             this.index += 1;
-            this.index %= 6;
+            this.index %= this.projects.length;
         },
         previous() {
+            const numProjects = this.projects.length
             this.$refs.carousel.prev();
-            this.index += 5;
-            this.index %= 6;
+            this.index += numProjects-1;
+            this.index %= numProjects;
         },
         goTo(index) {
             this.$refs.carousel.goTo(index);
