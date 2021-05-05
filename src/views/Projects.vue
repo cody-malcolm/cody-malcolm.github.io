@@ -42,12 +42,15 @@
                         FileSharer<br />Java/JavaFX
                     </button>
                     <button @click="goTo(2)" class="button desktop">
-                        Twitter Clone<br />Full Stack Web
+                        Mastermind<br />Ruby
                     </button>
                     <button @click="goTo(3)" class="button desktop">
-                        Etch a Sketch<br />Front End Web
+                        Twitter Clone<br />Full Stack Web
                     </button>
                     <button @click="goTo(4)" class="button desktop">
+                        Etch a Sketch<br />Front End Web
+                    </button>
+                    <button @click="goTo(5)" class="button desktop">
                         Portfolio Website<br />Vue and Node
                     </button>
                 </div>
@@ -118,6 +121,20 @@ export default {
                                 admin.`,
                     img: 'filesharer.png',
                     github: 'https://github.com/cody-malcolm/FileSharer'
+                },
+                {
+                    name: 'Mastermind',
+                    techs: ['Ruby'],
+                    description: `In this project, I implemented a CLI Mastermind
+                                application in Ruby. I was strongly motivated to
+                                go above and beyond with this project, so I
+                                implemented a variety of extra features including
+                                the ability to play matches, the option to play
+                                against several different AI strength levels, and
+                                a secret Easter Egg. There is a link to a live
+                                demo in the README.`,
+                    img: 'mastermind.png',
+                    github: 'https://github.com/cody-malcolm/odin-mastermind'
                 },
                 {
                     name: 'Twitter Clone',
